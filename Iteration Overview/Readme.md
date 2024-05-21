@@ -1,0 +1,1 @@
+The iteration overview is a small card that the players receive so that they do not have to read the individual steps in the instructions for each iteration. As we had to produce several games at once, the resulting pdf contains nine overview cards, which still have to be cut to size after printing.

@@ -1,0 +1,1 @@
+The instructions consist of two parts. Firstly, there is some background text to get the players in the right mood. The second part is the actual game instructions. Both are written down in the file **Anleitung.tex**.

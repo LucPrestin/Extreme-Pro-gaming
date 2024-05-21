@@ -1,0 +1,13 @@
+ID;Kosten;Titel;"Effekthinweis";"Systemteil";"Ist Start-Ticket";"Fluff";"Temporäre Veränderung an Storypoints";"Permanente Veränderung an Storypoints";Veränderung an Bugs;Veränderung an Features;Debt Backend;"Debt Frontend";"Sonstiger Effekt"
+Bug 02;1;Export der Berichte zu Word funktioniert;"hidden";"Backend";"Nein";"Ein Bug weniger. Herzlichen Glückwunsch.";;;;;;;
+Bug 03;1;Klartext-Passwort im Login-Form;"hidden";"Frontend";"Nein";"Dir kommt es vor als hättest du diesen Bug schon einmal repariert.";;;;;;;"Ist der Technical Debt in Frontend \technicaldebtfrontend\ größer oder gleich zwei, lege diese Karte umgedreht zurück ins Backlog."
+Bug 04;1;Passwortfehler bei erfolgreichem Login;"hidden";"Frontend";"Nein";"Endlich ist dieser Bug zu. Also auf zum nächsten Ticket. Manchmal fragst du dich, ob du überhaupt noch ein Mensch bist oder nur noch für anstehende Tickets existierst.";;;;;;;
+Bug 05;1;\glqq Löschen\grqq -Button löscht falschen Eintrag;"hidden";"Frontend";"Nein";"Diesen Bug hast du wie auf Autopilot repariert. Die Frage ist jetzt: weil er so einfach war oder weil du nicht ganz bei der Sache warst?";;;;;;;
+Bug 07;2;Icons skalieren nicht richtig;"hidden";"Frontend";"Nein";"Und ein weiteres Ticket abgeschlossen. Wunderbar!";;;;;;;
+Bug 08;2;Falscher Nutzername wird im Profil angezeigt;"hidden";"Frontend";"Ja";"Dieses Problem ist behoben, dafür bricht es an einer neuen Stelle auseinander.";;;1;;;;
+Bug 09;3;Falsches Format in der Datenbank;"hidden";"Backend";"Nein";"Irgendwie seid ihr gerade ganz schön fertig und braucht eine Pause";"-1";;;;;;
+Bug 06;1;Build schlägt wegen falschem Typen fehl;"negative";"Backend";"Nein";"Der Bug hat sich als schwerwiegender herausgestellt als erwartet.";;;;;1;;"\returntobacklog{\backend-\bug}{3}{\technicaldebtbackend}"
+Bug 11;3;Alter Eintrag im \glqq new\grqq -Formular;"negative";"Frontend";"Nein";"It's not a bug, it's a feature. Ihr habt die ganze Arbeit umsonst gemacht. Hättet ihr das Feature mal dokumentiert. Dann wäre das nicht passiert.";;;;;;"1";
+Bug 12;3;Verschwundene Daten wiederfinden;"negative";"Backend";"Nein";"Endlich ist dieser Bug gefixt. Das hat euch aber ganz schön geschlaucht, sodass ihr Urlaub braucht.";"-2";;;;;;
+Bug 01;1;Verwendung eines falschen Parsers;"positive";"Backend";"Nein";"Die Reparatur dieses Bugs hat zu neuer Motivation für schöne Architektur geführt.";;;;;-1;;
+Bug 10;3;Sensitive Informationen sind für alle sichtbar;"positive";"Frontend";"Nein";"Den Bug zu finden war einfacher als angenommen. Das gibt dir neue Zuversicht in deine Fähigkeiten.";"1";;;;;;

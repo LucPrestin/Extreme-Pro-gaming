@@ -1,0 +1,10 @@
+ID;Reihenfolge;Foreshadowing;Fluff;Temporäre Veränderung an Storypoints;Permanente Veränderung an Storypoints;Veränderung an Bugs;Veränderung an Features;Debt Backend;Debt Frontend;Sonstiger Effekt
+Event 01;1;Startschwierigkeiten;Die IT-Abteilung hat es noch nicht geschafft, den GitLab-Zugriff für euch alle freizuschalten. Das wird aber \glqq bald\grqq\ passieren.;-2;;;;;;
+Event 20;2;Die Herausforderung;\personaharald\ möchte wissen aus welchem Holz ihr geschnitzt seid.;;;;;;;Schafft ihr es bis zum Beginn von Iteration 5 insgesamt 8 Features bearbeitet zu haben, erhaltet ihr dauerhaft 2 \storypoint.
+Event 04;3;Das Kundengespräch;\personasabine\ hat wieder mit \personamark\ gesprochen. Unter Zeitdruck konnte sie leider nicht nein sagen.;;;;2;;;
+Event 05;4;Ein frischer Wind;Die Firma hat ein Sommerfest veranstaltet, was euch neue Energie gibt.;;2;;;;;
+Event 08;5;Die Verschnaufspause;Nach einer kurzen Pause am Kicker geht ihr mit vollem Elan zurück an die Arbeit.;2;;;;;;
+Event 06;6;Unerwartete Probleme;Aufgrund von Budgetkürzungen müssen Mitarbeiter:innen entlassen werden.;;;;;;;Ihr habt dauerhaft nur noch die Hälfte (aufgerundet) der aktuellen Storypoints \storypoint\ zur Verfügung.
+Event 12;7;Unmut im Team;\personaharald\ hat heute einen sehr schlechten Tag, sodass er in Sachen Planning nicht mit sich reden lässt.;;;;;;;Ihr dürft diese Iteration \underline{\textbf{nicht}} refactorn.
+Event 16;8;Mark im Glück;\personamark\ ist sehr zufrieden mit euch und hat seine Prioritäten überdacht.;;;;;;;Entfernt das \feature\ mit den geringsten Kosten aus dem Backlog. Das weggelegte Feature zählt \underline{\textbf{nicht}} für die Berechnung des Technical Debt, gibt aber auch \underline{\textbf{keinen}} Punkt.
+Event 18;9;Fast geschafft ...;Ihr seid kurz vor dem Release. Da wird wohl leider ein Crunch nötig.;;;1;2;;;

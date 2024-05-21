@@ -1,0 +1,1 @@
+The playing field serves as a tray for the cards, chips, etc. It must be printed in DIN A1 format so that it fits in terms of size.
