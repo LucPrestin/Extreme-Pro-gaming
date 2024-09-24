@@ -1,0 +1,97 @@
+\documentclass{scrartcl}
+
+\usepackage[
+    a1paper,
+    landscape,
+    margin=2cm
+]{geometry}
+
+\usepackage{tikz}
+
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{varwidth}
+\usepackage[american]{babel}
+\usepackage{emoji}
+\usepackage{lipsum}
+
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes}
+
+\pagenumbering{gobble}
+
+\newcommand{\cardslotwidth}{120mm}
+\newcommand{\cardslotheight}{160mm}
+
+\newcommand{\cardborder}[4]{
+    \node[anchor=#1, minimum height=\cardslotheight, minimum width=\cardslotwidth] (#3) at (#2) {};
+    \node[anchor=north, minimum height=0.25*\cardslotheight, minimum width=\cardslotwidth, text width = 100mm, text centered, font=\fontsize{40}{40}\selectfont] (#3text) at (#3.north) {#4};
+    \node[anchor=south, minimum height=0.75*\cardslotheight, minimum width=0.75*\cardslotwidth, draw] (#3box) at (#3.south) {};
+}
+
+\newcommand{\tokenstorage}[4]{
+    \node[anchor=#1, minimum height=\cardslotheight, minimum width = 240mm] (#3) at (#2) {};
+    \node[anchor=north, minimum height=0.25*\cardslotheight, minimum width = 2*\cardslotwidth, text width = 200mm, text centered, font=\fontsize{40}{40}\selectfont] (#3text) at (#3.north) {#4};
+    \node[anchor=south, minimum height=0.75*\cardslotheight, minimum width = 1.75*\cardslotwidth, draw] (#3box) at (#3.south) {};
+}
+
+\newcommand{\backendcolor}{blue!40}
+\newcommand{\frontendcolor}{red!40}
+
+\newcommand{\technicaldebt}[4]{\node[anchor=#1, fill=#4, draw, circle, minimum width=20mm] (#3) at (#2) {};}
+\newcommand{\technicaldebtfrontend}[3]{\technicaldebt{#1}{#2}{#3}{\frontendcolor}}
+\newcommand{\technicaldebtbackend}[3]{\technicaldebt{#1}{#2}{#3}{\backendcolor}}
+
+\begin{document}
+
+\setemojifont{TwemojiMozilla}
+\thispagestyle{empty}
+
+\begin{figure}
+\centering
+\begin{tikzpicture}[remember picture, overlay]
+    \cardborder{north west}{$(current page.north west) + (0mm, -60mm) + (0mm, 0mm)$}{pastevents}{Past\\Events}
+    \cardborder{north west}{$(current page.north west) + (0mm, -60mm) + (120mm, 0mm)$}{events}{Events \emoji{calendar}}
+    \cardborder{north west}{$(current page.north west) + (0mm, -60mm) + (120mm, -170mm)$}{features}{Features \emoji{clipboard}}
+    \cardborder{north west}{$(current page.north west) + (0mm, -60mm) + (120mm, -340mm)$}{bugs}{Bugs \emoji{beetle}}
+
+    \draw[line width = 3pt]
+        ($(current page.north west) + (240mm, 0mm) + (0mm, -20mm) $) --
+        ($(current page.south west) + (240mm, 0mm) - (0mm, -20mm) $);
+
+    \node[rectangle, anchor=north, minimum height = 30mm, font=\fontsize{100}{100}\selectfont] at ($(current page.north) + (0mm, -10mm)$) {Backlog};
+
+    \cardborder{north west}{$(current page.north west) + (0mm, -60mm) + (240mm, 0mm)$}{backlogitem1}{}
+    \cardborder{north west}{$(current page.north west) + (0mm, -60mm) + (360mm, 0mm)$}{backlogitem2}{}
+    \cardborder{north west}{$(current page.north west) + (0mm, -60mm) + (480mm, 0mm)$}{backlogitem3}{}
+    \cardborder{north west}{$(current page.north west) + (0mm, -60mm) + (240mm, -170mm)$}{backlogitem4}{}
+    \cardborder{north west}{$(current page.north west) + (0mm, -60mm) + (360mm, -170mm)$}{backlogitem5}{}
+    \cardborder{north west}{$(current page.north west) + (0mm, -60mm) + (480mm, -170mm)$}{backlogitem6}{}
+    \cardborder{north west}{$(current page.north west) + (0mm, -60mm) + (240mm, -340mm)$}{backlogitem7}{}
+    \cardborder{north west}{$(current page.north west) + (0mm, -60mm) + (360mm, -340mm)$}{backlogitem8}{}
+    \cardborder{north west}{$(current page.north west) + (0mm, -60mm) + (480mm, -340mm)$}{backlogitem9}{}
+
+    \node[anchor=center, font=\Huge, scale=6] at (backlogitem9box.center) {\emoji{skull-and-crossbones}};
+
+    \draw[line width = 3pt]
+        ($(current page.north west) + (600mm, 0mm) + (0mm, -20mm)$) --
+        ($(current page.south west) + (600mm, 0mm) - (0mm, -20mm)$);
+
+    \cardborder{north west}{$(current page.north west) + (0mm, -60mm) + (600mm, -340mm)$}{completedfeatures}{Completed\\Features}
+    \cardborder{north west}{$(current page.north west) + (0mm, -60mm) + (720mm, -340mm)$}{fixedbugs}{Fixed\\Bugs}
+
+    \tokenstorage{north west}{$(current page.north west) + (0mm, -60mm) + (600mm, 0mm)$}{storypoints}{Storypoints \emoji{teddy-bear}}
+    \draw[line width = 2pt, loosely dashed]
+        ($(storypointsbox.north east) + (-70mm, 0mm)$) --
+        ($(storypointsbox.south east) + (-70mm, 0mm)$);
+    \node[anchor=north west, text centered, font=\huge, text width = 140mm] at (storypointsbox.north west) {Permanent quota};
+    \node[anchor=north east, text centered, font=\huge, text width = 70mm] at (storypointsbox.north east) {Temporarily not usable};
+
+    \tokenstorage{north west}{$(current page.north west) + (0mm, -60mm) + (600mm, -170mm)$}{technicaldebt}{Technical Debt}
+    \technicaldebtfrontend{center}{$(technicaldebttext.west) + (50mm, 0mm)$}{technicaldebtfrontend}
+    \technicaldebtbackend{center}{$(technicaldebttext.east) + (-50mm, 0mm)$}{technicaldebtbackend}
+\end{tikzpicture}
+\end{figure}
+
+\end{document}
