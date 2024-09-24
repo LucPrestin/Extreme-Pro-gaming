@@ -1,0 +1,60 @@
+\ProvidesPackage{effects}
+
+\RequirePackage{emoji}
+\RequirePackage{tikz}
+
+% ----- Reusable definitions ----- %
+
+\newcommand{\backendcolor}{blue!40}
+\newcommand{\frontendcolor}{red!40}
+\newcommand{\eventcolor}{orange!40}
+
+\newcommand{\technicaldebt}[1]{\tikz[baseline=0.4ex]\node[fill=#1, draw, circle, minimum width=11pt] () {};}
+\newcommand{\technicaldebtfrontend}{\technicaldebt{\frontendcolor}}
+\newcommand{\technicaldebtbackend}{\technicaldebt{\backendcolor}}
+
+\newcommand{\feature}{Feature \emoji{clipboard}}
+\newcommand{\features}{Features \emoji{clipboard}}
+\newcommand{\bug}{Bug \emoji{beetle}}
+\newcommand{\bugs}{Bugs \emoji{beetle}}
+\newcommand{\storypoint}{\emoji{teddy-bear}}
+
+\newcommand{\kosten}[1]{the cost of \textbf{#1} \storypoint}
+
+\newcommand{\backend}{\colorbox{\backendcolor}{Backend}}
+\newcommand{\frontend}{\colorbox{\frontendcolor}{Frontend}}
+
+% ----- Personas ----- %
+
+\newcommand{\personaharald}{Harald \emoji{old-man-medium-skin-tone}}
+\newcommand{\personamathilde}{Mathilde \emoji{woman-dark-skin-tone}}
+\newcommand{\personasabine}{Sabine \emoji{woman-medium-skin-tone}}
+\newcommand{\personamark}{Mark \emoji{man-medium-skin-tone-curly-hair}}
+
+% ----- Commands ----- %
+
+\newcommand{\addpermanentstorypoints}[1]{You \underline{permanently} have #1 more \storypoint\ at your disposal.}
+\newcommand{\removepermanentstorypoints}[1]{You \underline{permanently} have #1 less \storypoint\ at your disposal.}
+
+\newcommand{\addtemporarystorypoints}[1]{\underline{Only in the next iteration}, you have #1 \storypoint\ more at your disposal.}
+\newcommand{\removetemporarystorypoints}[1]{\underline{Only in the next iteration}, you have #1 \storypoint\ less at your disposal.}
+
+\newcommand{\addtemporarystorypointsnow}[1]{\underline{Only in this iteration}, you have #1 \storypoint\ more at your disposal.}
+\newcommand{\removetemporarystorypointsnow}[1]{\underline{Only in the next iteration}, you have #1 \storypoint\ less at your disposal.}
+
+\newcommand{\addfeature}{Add one \feature\ to the backlog.}
+\newcommand{\addfeatures}[1]{Add #1 \features\ to the backlog.}
+
+\newcommand{\addbug}{Add one \bug\ to the backlog.}
+\newcommand{\addbugs}[1]{Add #1 \bugs\ to the backlog.}
+
+\newcommand{\addfeaturesandbugs}[2]{Add #1 \feature\ and #2 \bug\ to the backlog.}
+
+\newcommand{\adddebtbackend}[1]{Add #1 \technicaldebtbackend\ technical debt to the backend.}
+\newcommand{\adddebtfrontend}[1]{Add #1 \technicaldebtfrontend\ technical debt to the frontend.}
+\newcommand{\removedebtbackend}[1]{Remove #1 \technicaldebtbackend\ technical debt from the backend.}
+\newcommand{\removedebtfrontend}[1]{Remove #1 \technicaldebtfrontend\ technical debt from the frontend.}
+
+\newcommand{\dontcountfordebtcalculation}{This card does \underline{\textbf{not}} count for the calculation of technical debt.}
+
+\newcommand{\returntobacklog}[3]{Put this card with this side facing up back into the backlog. It is a #1 with \kosten{#2} + 1 \storypoint / #3.}
