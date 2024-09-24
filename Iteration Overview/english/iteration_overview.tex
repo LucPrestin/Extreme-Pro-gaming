@@ -1,0 +1,75 @@
+\documentclass[a4paper, 11pt]{scrartcl}
+
+\usepackage{geometry}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{varwidth}
+\usepackage{tikz}
+\usepackage[american]{babel}
+\usepackage{xcolor}
+\usepackage{mathabx}
+\usepackage{shapepar}
+\usepackage{emoji}
+
+\usetikzlibrary{positioning, calc, shapes, arrows.meta}
+\pagenumbering{gobble}
+\geometry{a4paper, top=1cm, left=15mm, right=15mm, bottom=1cm}
+
+\newcommand{\backendcolor}{blue!40}
+\newcommand{\frontendcolor}{red!40}
+\newcommand{\technicaldebt}[1]{\tikz\node[fill=#1, draw, circle, minimum size=2pt] () {};}
+\newcommand{\technicaldebtfrontend}{\technicaldebt{\frontendcolor}}
+\newcommand{\technicaldebtbackend}{\technicaldebt{\backendcolor}}
+\newcommand{\overviewcard}{
+\node[draw, minimum height = 9cm, minimum width = 6cm, text width = 6cm] (border) {%
+\begin{enumerate}%
+\item Execute an event \emoji{calendar}%
+\item Draw a feature \emoji{clipboard}%
+\item Plan the iteration%
+\begin{itemize}%
+\item Select ticket(s) \emoji{clipboard}\emoji{beetle}%
+\item Refactoring%
+\item Draw more feature(s) \emoji{clipboard}%
+\end{itemize}%
+\item Execute iteration%
+\item Increase technical tebt \technicaldebtfrontend\ \technicaldebtbackend\ if applicable%
+\item Check end condition%
+\item Prepare next iteration%
+\end{enumerate}%
+};%
+}
+
+\begin{document}%
+\setemojifont{TwemojiMozilla}%
+\noindent%
+\begin{tikzpicture}%
+\overviewcard%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\overviewcard%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\overviewcard%
+\end{tikzpicture}%
+\newline%
+\begin{tikzpicture}%
+\overviewcard%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\overviewcard%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\overviewcard%
+\end{tikzpicture}%
+\newline%
+\begin{tikzpicture}%
+\overviewcard%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\overviewcard%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\overviewcard%
+\end{tikzpicture}%
+\end{document}%
