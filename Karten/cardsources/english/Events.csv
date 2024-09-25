@@ -1,0 +1,10 @@
+ID;Reihenfolge;Foreshadowing;Fluff;Temporäre Veränderung an Storypoints;Permanente Veränderung an Storypoints;Veränderung an Bugs;Veränderung an Features;Debt Backend;Debt Frontend;Sonstiger Effekt
+Event 01;1;Difficulties getting started;The IT department did not prepare your GitLab accounts yet. But ther assert it will happen \glqq soon\grqq .;-2;;;;;;
+Event 20;2;The challenge;\personaharald\ wants to know what you're made of.;;;;;;;If you manage to complete 8 features until the start of iteration 5, you permanently gain 2 \storypoint.
+Event 04;3;Talking to the customer;\personasabine\ talked to \personamark\ again. Under time pressure, she could not say no.;;;;2;;;
+Event 05;4;A fresh wind;The company organized a summer festival which gives you new energy.;;2;;;;;
+Event 08;5;Taking a breather;After a quick foosball break, it's back to work with renewed vigor.;2;;;;;;
+Event 06;6;Unexpected problems;"Due to budget cuts, some employees need to be laid off. ";;;;;;;Your permanent story point \storypoint\ contingency from now on is half of the current amount (rounded up).
+Event 12;7;Discontent within the team;\personaharald\ has a bad day so that he won't budge when it comes to planning.;;;;;;;You \underline{\textbf{cannot}} refactor in this iteration.
+Event 16;8;Mark in luck;\personamark\ is happy with you and rethought his priorities.;;;;;;;Remove the \feature\ with the least cost from the backlog. The removed feature does \underline{\textbf{not}} count for the calculation of technical debt, but it also gives \underline\textbf{no}} points.
+Event 18;9;Almost done...;You are close to the release deadline. Unfortunately, a crunch will be necessary.;;;1;2;;;
