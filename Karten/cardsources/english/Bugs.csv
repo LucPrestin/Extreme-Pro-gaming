@@ -1,0 +1,13 @@
+ID;Kosten;Titel;"Effekthinweis";"Systemteil";"Ist Start-Ticket";"Fluff";"Temporäre Veränderung an Storypoints";"Permanente Veränderung an Storypoints";Veränderung an Bugs;Veränderung an Features;Debt Backend;"Debt Frontend";"Sonstiger Effekt"
+Bug 02;1;Export of reports to word is broken;"hidden";"Backend";"Nein";"One less bug. Congratulations.";;;;;;;
+Bug 03;1;Plain text password in login form;"hidden";"Frontend";"Nein";"You feel like you've fixed this bug before.";;;;;;;"If the frontend technical debt \technicaldebtfrontend\ is greater or equal to two, put this card turned araoung back into the backlog."
+Bug 04;1;Password error on successful login;"hidden";"Frontend";"Nein";"You finally fixed this bug. On to the next ticket. Sometimes, you ask yourself whether you're still human or only exist for closing tickets.";;;;;;;
+Bug 05;1;\glqq Delete\grqq\ button deletes the wrong entry;"hidden";"Frontend";"Nein";"You fixed this bug as if on autopilot. Only question: Was that because it was so easy or because you were not quite on the ball?";;;;;;;
+Bug 07;2;Icons don't scale correctly;"hidden";"Frontend";"Nein";"And one more ticket closed. Awesome!";;;;;;;
+Bug 08;2;Wrong user name shown in profile;"hidden";"Frontend";"Ja";"This problem has been fixed but it's falling apart elsewhere.";;;1;;;;
+Bug 09;3;Wrong format in the database;"hidden";"Backend";"Nein";"Somehow you are pretty exhausted and need a break.";"-1";;;;;;
+Bug 06;1;Build fails due to wrong type;"negative";"Backend";"Nein";"THis bug is more complex than expected.";;;;;1;;"\returntobacklog{\backend-\bug}{3}{\technicaldebtbackend}"
+Bug 11;3;Old entry in the \glqq new\grqq\ form;"negative";"Frontend";"Nein";"It's not a bug, it's a feature. You did all this work for nothing. If you had documented this feature, this would not have happened.";;;;;;"1";
+Bug 12;3;Find missing files;"negative";"Backend";"Nein";"Finally this bug is fixed. But it was very taxing so that you need a vacation.";"-2";;;;;;
+Bug 01;1;Usage of a wrong parser;"positive";"Backend";"Nein";"FIxing this bug lead to new motivation for a clean architecture.";;;;;-1;;
+Bug 10;3;Sensitive information visible for everyone;"positive";"Frontend";"Nein";"Finding this bug was easier than expected. This gives you more confidence in you capabilities.";"1";;;;;;
