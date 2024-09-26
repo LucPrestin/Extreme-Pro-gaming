@@ -1,4 +1,5 @@
 import csv
+from typing import Dict
 
 from pylatex import TikZ
 from pylatex.utils import NoEscape
@@ -14,17 +15,17 @@ class Event(Card):
         self.foreshadowing = foreshadowing
 
     @classmethod
-    def temporarystrypointsstatement(cls) -> str:
+    def temporarystrypointsstatement(cls) -> Dict[str, str]:
         return {
             "remove": r"\removetemporarystorypointsnow",
             "add": r"\addtemporarystorypointsnow",
         }
 
     @classmethod
-    def load_from_csv(cls):
+    def load_from_csv(cls, language: str):
         result = []
 
-        with open("./cardsources/Events.csv", newline="") as csvfile:
+        with open(f"./cardsources/{language}/Events.csv", newline="") as csvfile:
             reader = csv.DictReader(csvfile, delimiter=";")
             for row in reader:
                 result.append(

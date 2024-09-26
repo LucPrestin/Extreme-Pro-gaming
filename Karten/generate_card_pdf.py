@@ -10,6 +10,7 @@ from ticket_card import Bug, Feature
 cards_per_row = 3
 cards_per_page = 9
 
+
 def add_cards_in_rows(main_container, cards_for_row):
     with main_container.create(Center()) as container:
         for row in cards_for_row:
@@ -54,7 +55,7 @@ def add_ticket_pages(
         main_container.append(NewPage())
 
 
-def create_document(debug):
+def create_document(debug: bool, babel_option: str, language: str):
     doc = Document(
         documentclass="scrartcl",
     )
@@ -65,11 +66,11 @@ def create_document(debug):
     doc.packages.append(Command("usepackage", "multirow"))
     doc.packages.append(Command("usepackage", "varwidth"))
     doc.packages.append(Command("usepackage", "tikz"))
-    doc.packages.append(Command("usepackage", "babel", options="ngerman"))
+    doc.packages.append(Command("usepackage", "babel", options=babel_option))
     doc.packages.append(Command("usepackage", "xcolor"))
     doc.packages.append(Command("usepackage", "mathabx"))
     doc.packages.append(Command("usepackage", "shapepar"))
-    doc.packages.append(Command("usepackage", "../texsources/effects"))
+    doc.packages.append(Command("usepackage", f"../../texsources/{language}/effects"))
 
     doc.preamble.append(
         NoEscape(r"\usetikzlibrary{positioning, calc, shapes, arrows.meta}")
@@ -81,17 +82,45 @@ def create_document(debug):
 
     doc.append(NoEscape(r"\setemojifont{TwemojiMozilla}"))
 
-    add_ticket_pages(doc, Feature.load_from_csv(), cards_per_page, cards_per_row, debug)
-    add_ticket_pages(doc, Bug.load_from_csv(), cards_per_page, cards_per_row, debug)
-    add_ticket_pages(doc, Event.load_from_csv(), cards_per_page, cards_per_row, debug)
+    add_ticket_pages(
+        doc, Feature.load_from_csv(language), cards_per_page, cards_per_row, debug
+    )
+    add_ticket_pages(
+        doc, Bug.load_from_csv(language), cards_per_page, cards_per_row, debug
+    )
+    add_ticket_pages(
+        doc, Event.load_from_csv(language), cards_per_page, cards_per_row, debug
+    )
 
-    doc.generate_tex("output/cards")
-    doc.generate_pdf("output/cards", clean=True, clean_tex=False, compiler="lualatex")
+    doc.generate_tex(f"output/{language}/cards")
+    doc.generate_pdf(
+        f"output/{language}/cards", clean=True, clean_tex=False, compiler="lualatex"
+    )
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--debug", action="store_true", help="If this flag is set, each card will get an ID printed on. This way it is easier to match the printed  cards from playtests to the digital versions.")
+
+    parser.add_argument(
+        "--debug",
+        action="store_true",
+        help="If this flag is set, each card will get an ID printed on. This way it is easier to match the printed  cards from playtests to the digital versions.",
+    )
+    parser.add_argument(
+        "--language",
+        action="store",
+        choices=["german", "english", "both"],
+        default="german",
+        const="german",
+        nargs="?",
+        required=False,
+        help="Provide the language you want the cards to be in. Currently supported languages are german and english. Default is german.",
+    )
+
     args = parser.parse_args()
 
-    create_document(args.debug)
+    if args.language in ("german", "both"):
+        create_document(args.debug, "ngerman", "german")
+
+    if args.language in ("english", "both"):
+        create_document(args.debug, "american", "english")

@@ -1,0 +1,810 @@
+\documentclass{scrartcl}%
+\usepackage[T1]{fontenc}%
+\usepackage[utf8]{inputenc}%
+\usepackage{lmodern}%
+\usepackage{textcomp}%
+\usepackage{lastpage}%
+\usepackage{tabularx}%
+\usepackage{graphicx}%
+\usepackage{multirow}%
+\usepackage{varwidth}%
+\usepackage{tikz}%
+\usepackage[ngerman]{babel}%
+\usepackage{xcolor}%
+\usepackage{mathabx}%
+\usepackage{shapepar}%
+\usepackage{../../texsources/german/effects}%
+\usepackage{ragged2e}%
+%
+\usepackage{geometry}%
+\usetikzlibrary{positioning, calc, shapes, arrows.meta}%
+\pagenumbering{gobble}%
+\geometry{a4paper, top=0.5cm, left=14mm, right=14mm, bottom=0.5cm}%
+%
+\begin{document}%
+\normalsize%
+\setemojifont{TwemojiMozilla}%
+\begin{center}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north west, fill=\frontendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south west) {Frontend};%
+\node[anchor=south, text width=5cm, font=\large] at ($(border.south) + (0cm, 0.5cm)$) {\textit{Icons für die wichtigsten Buttons hinzufügen}};%
+\node[anchor=north, minimum width = 5cm, minimum height = 2.1cm, draw, rounded corners] (costbox) at ($(frontnamebox.south) + (0cm, -2cm)$) {};\node[anchor=west, minimum width = 2.5cm, minimum height = 2.1cm] (costboxwest) at (costbox.west) {};\node[anchor=east, minimum width = 2.5cm, minimum height = 2.1cm] (costboxeast) at (costbox.east) {};\node[anchor=west, fill=white, font=\large] at ($(costbox.north west) + (0.25cm, 0cm)$) {\textkosten};\node[anchor = east, font=\Huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor = west, font=\Huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor=center, font=\Large] at (costbox.center) {+};\node[anchor = west, font=\Huge] at ($(costboxeast.west) + (0.25cm, 0cm)$) {1};\node[anchor=north west, font=\Large] at ($(costboxeast.north west) + (0.75cm, -0.4cm)$) {\emoji{teddy-bear}};\node[anchor=north west, draw, circle, fill=\frontendcolor, minimum size = 0.5cm] at ($(costboxeast.north west) + (1.5cm, -1.25cm)$) {};\draw ($(costboxeast.south west) + (0.9cm, 0.55cm)$) -- ($(costboxeast.north east) + (-0.6cm, -0.55cm)$);%
+\node[anchor=center, draw, rounded corners, minimum width = 1.5cm, minimum height = 1.5cm] (effectbox) at ($(costbox.south) + (0cm, -1cm)$) {};\node[anchor=center, fill=white, font=\fontsize{30}{30}\selectfont] at (effectbox.center) {?};%
+\node[anchor=north east, font=\Large, minimum width=3cm] at (frontnamebox.south east) {Start};%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north east, fill=\backendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south east) {Backend};%
+\node[anchor=south, text width=5cm, font=\large] at ($(border.south) + (0cm, 0.5cm)$) {\textit{Login-Schlüssel hashen}};%
+\node[anchor=north, minimum width = 5cm, minimum height = 2.1cm, draw, rounded corners] (costbox) at ($(frontnamebox.south) + (0cm, -2cm)$) {};\node[anchor=west, minimum width = 2.5cm, minimum height = 2.1cm] (costboxwest) at (costbox.west) {};\node[anchor=east, minimum width = 2.5cm, minimum height = 2.1cm] (costboxeast) at (costbox.east) {};\node[anchor=west, fill=white, font=\large] at ($(costbox.north west) + (0.25cm, 0cm)$) {\textkosten};\node[anchor = south, font=\huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor = north west, font=\huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor = north east, font=\huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor=center, font=\Large] at (costbox.center) {+};\node[anchor = west, font=\Huge] at ($(costboxeast.west) + (0.25cm, 0cm)$) {1};\node[anchor=north west, font=\Large] at ($(costboxeast.north west) + (0.75cm, -0.4cm)$) {\emoji{teddy-bear}};\node[anchor=north west, draw, circle, fill=\backendcolor, minimum size = 0.5cm] at ($(costboxeast.north west) + (1.5cm, -1.25cm)$) {};\draw ($(costboxeast.south west) + (0.9cm, 0.55cm)$) -- ($(costboxeast.north east) + (-0.6cm, -0.55cm)$);%
+\node[anchor=center, draw, rounded corners, minimum width = 1.5cm, minimum height = 1.5cm] (effectbox) at ($(costbox.south) + (0cm, -1cm)$) {};\node[anchor=center, single arrow, draw, fill=white, rotate=270, minimum height=1cm, minimum width=1cm] at (effectbox.center) {};%
+\node[anchor=north west, font=\Large, minimum width=3cm] at (frontnamebox.south west) {Start};%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north east, fill=\backendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south east) {Backend};%
+\node[anchor=south, text width=5cm, font=\large] at ($(border.south) + (0cm, 0.5cm)$) {\textit{Migration der Datenbank auf das neue Schema}};%
+\node[anchor=north, minimum width = 5cm, minimum height = 2.1cm, draw, rounded corners] (costbox) at ($(frontnamebox.south) + (0cm, -2cm)$) {};\node[anchor=west, minimum width = 2.5cm, minimum height = 2.1cm] (costboxwest) at (costbox.west) {};\node[anchor=east, minimum width = 2.5cm, minimum height = 2.1cm] (costboxeast) at (costbox.east) {};\node[anchor=west, fill=white, font=\large] at ($(costbox.north west) + (0.25cm, 0cm)$) {\textkosten};\node[anchor = south, font=\huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor = north west, font=\huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor = north east, font=\huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor=center, font=\Large] at (costbox.center) {+};\node[anchor = west, font=\Huge] at ($(costboxeast.west) + (0.25cm, 0cm)$) {1};\node[anchor=north west, font=\Large] at ($(costboxeast.north west) + (0.75cm, -0.4cm)$) {\emoji{teddy-bear}};\node[anchor=north west, draw, circle, fill=\backendcolor, minimum size = 0.5cm] at ($(costboxeast.north west) + (1.5cm, -1.25cm)$) {};\draw ($(costboxeast.south west) + (0.9cm, 0.55cm)$) -- ($(costboxeast.north east) + (-0.6cm, -0.55cm)$);%
+\node[anchor=center, draw, rounded corners, minimum width = 1.5cm, minimum height = 1.5cm] (effectbox) at ($(costbox.south) + (0cm, -1cm)$) {};\node[anchor=center, single arrow, draw, fill=white, rotate=270, minimum height=1cm, minimum width=1cm] at (effectbox.center) {};%
+\node[anchor=north west, font=\Large, minimum width=3cm] at (frontnamebox.south west) {Start};%
+\end{tikzpicture}%
+\newline%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north east, fill=\backendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south east) {Backend};%
+\node[anchor=south, text width=5cm, font=\large] at ($(border.south) + (0cm, 0.5cm)$) {\textit{Fuzzy search über alle Berichte erlauben}};%
+\node[anchor=north, minimum width = 5cm, minimum height = 2.1cm, draw, rounded corners] (costbox) at ($(frontnamebox.south) + (0cm, -2cm)$) {};\node[anchor=west, minimum width = 2.5cm, minimum height = 2.1cm] (costboxwest) at (costbox.west) {};\node[anchor=east, minimum width = 2.5cm, minimum height = 2.1cm] (costboxeast) at (costbox.east) {};\node[anchor=west, fill=white, font=\large] at ($(costbox.north west) + (0.25cm, 0cm)$) {\textkosten};\node[anchor = center, font=\Huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor=center, font=\Large] at (costbox.center) {+};\node[anchor = west, font=\Huge] at ($(costboxeast.west) + (0.25cm, 0cm)$) {1};\node[anchor=north west, font=\Large] at ($(costboxeast.north west) + (0.75cm, -0.4cm)$) {\emoji{teddy-bear}};\node[anchor=north west, draw, circle, fill=\backendcolor, minimum size = 0.5cm] at ($(costboxeast.north west) + (1.5cm, -1.25cm)$) {};\draw ($(costboxeast.south west) + (0.9cm, 0.55cm)$) -- ($(costboxeast.north east) + (-0.6cm, -0.55cm)$);%
+\node[anchor=center, draw, rounded corners, minimum width = 1.5cm, minimum height = 1.5cm] (effectbox) at ($(costbox.south) + (0cm, -1cm)$) {};\node[anchor=center, fill=white, font=\fontsize{30}{30}\selectfont] at (effectbox.center) {?};%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north east, fill=\backendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south east) {Backend};%
+\node[anchor=south, text width=5cm, font=\large] at ($(border.south) + (0cm, 0.5cm)$) {\textit{Editieren eines Berichts soll den Autor anpassen}};%
+\node[anchor=north, minimum width = 5cm, minimum height = 2.1cm, draw, rounded corners] (costbox) at ($(frontnamebox.south) + (0cm, -2cm)$) {};\node[anchor=west, minimum width = 2.5cm, minimum height = 2.1cm] (costboxwest) at (costbox.west) {};\node[anchor=east, minimum width = 2.5cm, minimum height = 2.1cm] (costboxeast) at (costbox.east) {};\node[anchor=west, fill=white, font=\large] at ($(costbox.north west) + (0.25cm, 0cm)$) {\textkosten};\node[anchor = center, font=\Huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor=center, font=\Large] at (costbox.center) {+};\node[anchor = west, font=\Huge] at ($(costboxeast.west) + (0.25cm, 0cm)$) {1};\node[anchor=north west, font=\Large] at ($(costboxeast.north west) + (0.75cm, -0.4cm)$) {\emoji{teddy-bear}};\node[anchor=north west, draw, circle, fill=\backendcolor, minimum size = 0.5cm] at ($(costboxeast.north west) + (1.5cm, -1.25cm)$) {};\draw ($(costboxeast.south west) + (0.9cm, 0.55cm)$) -- ($(costboxeast.north east) + (-0.6cm, -0.55cm)$);%
+\node[anchor=center, draw, rounded corners, minimum width = 1.5cm, minimum height = 1.5cm] (effectbox) at ($(costbox.south) + (0cm, -1cm)$) {};\node[anchor=center, fill=white, font=\fontsize{30}{30}\selectfont] at (effectbox.center) {?};%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north east, fill=\backendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south east) {Backend};%
+\node[anchor=south, text width=5cm, font=\large] at ($(border.south) + (0cm, 0.5cm)$) {\textit{E-Mails nur in einer Sprache schicken}};%
+\node[anchor=north, minimum width = 5cm, minimum height = 2.1cm, draw, rounded corners] (costbox) at ($(frontnamebox.south) + (0cm, -2cm)$) {};\node[anchor=west, minimum width = 2.5cm, minimum height = 2.1cm] (costboxwest) at (costbox.west) {};\node[anchor=east, minimum width = 2.5cm, minimum height = 2.1cm] (costboxeast) at (costbox.east) {};\node[anchor=west, fill=white, font=\large] at ($(costbox.north west) + (0.25cm, 0cm)$) {\textkosten};\node[anchor = center, font=\Huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor=center, font=\Large] at (costbox.center) {+};\node[anchor = west, font=\Huge] at ($(costboxeast.west) + (0.25cm, 0cm)$) {1};\node[anchor=north west, font=\Large] at ($(costboxeast.north west) + (0.75cm, -0.4cm)$) {\emoji{teddy-bear}};\node[anchor=north west, draw, circle, fill=\backendcolor, minimum size = 0.5cm] at ($(costboxeast.north west) + (1.5cm, -1.25cm)$) {};\draw ($(costboxeast.south west) + (0.9cm, 0.55cm)$) -- ($(costboxeast.north east) + (-0.6cm, -0.55cm)$);%
+\node[anchor=center, draw, rounded corners, minimum width = 1.5cm, minimum height = 1.5cm] (effectbox) at ($(costbox.south) + (0cm, -1cm)$) {};\node[anchor=center, fill=white, font=\fontsize{30}{30}\selectfont] at (effectbox.center) {?};%
+\end{tikzpicture}%
+\newline%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north west, fill=\frontendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south west) {Frontend};%
+\node[anchor=south, text width=5cm, font=\large] at ($(border.south) + (0cm, 0.5cm)$) {\textit{Anpassbare Templates für Berichte hinzufügen}};%
+\node[anchor=north, minimum width = 5cm, minimum height = 2.1cm, draw, rounded corners] (costbox) at ($(frontnamebox.south) + (0cm, -2cm)$) {};\node[anchor=west, minimum width = 2.5cm, minimum height = 2.1cm] (costboxwest) at (costbox.west) {};\node[anchor=east, minimum width = 2.5cm, minimum height = 2.1cm] (costboxeast) at (costbox.east) {};\node[anchor=west, fill=white, font=\large] at ($(costbox.north west) + (0.25cm, 0cm)$) {\textkosten};\node[anchor = center, font=\Huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor=center, font=\Large] at (costbox.center) {+};\node[anchor = west, font=\Huge] at ($(costboxeast.west) + (0.25cm, 0cm)$) {1};\node[anchor=north west, font=\Large] at ($(costboxeast.north west) + (0.75cm, -0.4cm)$) {\emoji{teddy-bear}};\node[anchor=north west, draw, circle, fill=\frontendcolor, minimum size = 0.5cm] at ($(costboxeast.north west) + (1.5cm, -1.25cm)$) {};\draw ($(costboxeast.south west) + (0.9cm, 0.55cm)$) -- ($(costboxeast.north east) + (-0.6cm, -0.55cm)$);%
+\node[anchor=center, draw, rounded corners, minimum width = 1.5cm, minimum height = 1.5cm] (effectbox) at ($(costbox.south) + (0cm, -1cm)$) {};\node[anchor=center, fill=white, font=\fontsize{30}{30}\selectfont] at (effectbox.center) {?};%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north west, fill=\frontendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south west) {Frontend};%
+\node[anchor=south, text width=5cm, font=\large] at ($(border.south) + (0cm, 0.5cm)$) {\textit{Automatisches Wechseln des Farbschemas}};%
+\node[anchor=north, minimum width = 5cm, minimum height = 2.1cm, draw, rounded corners] (costbox) at ($(frontnamebox.south) + (0cm, -2cm)$) {};\node[anchor=west, minimum width = 2.5cm, minimum height = 2.1cm] (costboxwest) at (costbox.west) {};\node[anchor=east, minimum width = 2.5cm, minimum height = 2.1cm] (costboxeast) at (costbox.east) {};\node[anchor=west, fill=white, font=\large] at ($(costbox.north west) + (0.25cm, 0cm)$) {\textkosten};\node[anchor = center, font=\Huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor=center, font=\Large] at (costbox.center) {+};\node[anchor = west, font=\Huge] at ($(costboxeast.west) + (0.25cm, 0cm)$) {1};\node[anchor=north west, font=\Large] at ($(costboxeast.north west) + (0.75cm, -0.4cm)$) {\emoji{teddy-bear}};\node[anchor=north west, draw, circle, fill=\frontendcolor, minimum size = 0.5cm] at ($(costboxeast.north west) + (1.5cm, -1.25cm)$) {};\draw ($(costboxeast.south west) + (0.9cm, 0.55cm)$) -- ($(costboxeast.north east) + (-0.6cm, -0.55cm)$);%
+\node[anchor=center, draw, rounded corners, minimum width = 1.5cm, minimum height = 1.5cm] (effectbox) at ($(costbox.south) + (0cm, -1cm)$) {};\node[anchor=center, fill=white, font=\fontsize{30}{30}\selectfont] at (effectbox.center) {?};%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north west, fill=\frontendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south west) {Frontend};%
+\node[anchor=south, text width=5cm, font=\large] at ($(border.south) + (0cm, 0.5cm)$) {\textit{Statistiken in die Übersicht integrieren}};%
+\node[anchor=north, minimum width = 5cm, minimum height = 2.1cm, draw, rounded corners] (costbox) at ($(frontnamebox.south) + (0cm, -2cm)$) {};\node[anchor=west, minimum width = 2.5cm, minimum height = 2.1cm] (costboxwest) at (costbox.west) {};\node[anchor=east, minimum width = 2.5cm, minimum height = 2.1cm] (costboxeast) at (costbox.east) {};\node[anchor=west, fill=white, font=\large] at ($(costbox.north west) + (0.25cm, 0cm)$) {\textkosten};\node[anchor = center, font=\Huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor=center, font=\Large] at (costbox.center) {+};\node[anchor = west, font=\Huge] at ($(costboxeast.west) + (0.25cm, 0cm)$) {1};\node[anchor=north west, font=\Large] at ($(costboxeast.north west) + (0.75cm, -0.4cm)$) {\emoji{teddy-bear}};\node[anchor=north west, draw, circle, fill=\frontendcolor, minimum size = 0.5cm] at ($(costboxeast.north west) + (1.5cm, -1.25cm)$) {};\draw ($(costboxeast.south west) + (0.9cm, 0.55cm)$) -- ($(costboxeast.north east) + (-0.6cm, -0.55cm)$);%
+\node[anchor=center, draw, rounded corners, minimum width = 1.5cm, minimum height = 1.5cm] (effectbox) at ($(costbox.south) + (0cm, -1cm)$) {};\node[anchor=center, fill=white, font=\fontsize{30}{30}\selectfont] at (effectbox.center) {?};%
+\end{tikzpicture}%
+\newline%
+\end{center}%
+\newpage%
+\begin{center}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north east, fill=\backendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south east) {Backend};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{Das Ticket war groß. Aber immerhin ist jetzt die Basisarbeit geleistet und ihr könnt coole neue Features oben drauf setzen. Der Kreativität sind keine Grenzen gesetzt.}};%
+\node[anchor=south, text width=5cm] at ($(border.south) + (0cm, 0.5cm)$) {\addfeature\ };%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north east, fill=\backendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south east) {Backend};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{Alle Teammitglieder haben einzeln an diesem Feature gearbeitet, ohne es zu kommunizieren. Entsprechend ist das Gesamtsystem Kraut und Rüben.}};%
+\node[anchor=south, text width=5cm] at ($(border.south) + (0cm, 0.5cm)$) {\adddebtbackend{1} };%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north west, fill=\frontendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south west) {Frontend};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{Beim Abarbeiten dieses Features sind dir Fehler aufgefallen.}};%
+\node[anchor=south, text width=5cm] at ($(border.south) + (0cm, 0.5cm)$) {\addbug\ };%
+\end{tikzpicture}%
+\newline%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north east, fill=\backendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south east) {Backend};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{Das war eine kleine Aufgabe für dich, die jemand anders aber viel bedeutet. Aus diesem Wissen schöpft ihr Kraft.}};%
+\node[anchor=south, text width=5cm] at ($(border.south) + (0cm, 0.5cm)$) {\addtemporarystorypoints{1} };%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north east, fill=\backendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south east) {Backend};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{Beim Implementieren dieses Features kamen dir neue Ideen.}};%
+\node[anchor=south, text width=5cm] at ($(border.south) + (0cm, 0.5cm)$) {\addfeature\ };%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north east, fill=\backendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south east) {Backend};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{Das Feature hat ein veraltetes Feature ersetzt. Der Code ist dadurch deutlich schlanker geworden.}};%
+\node[anchor=south, text width=5cm] at ($(border.south) + (0cm, 0.5cm)$) {\removedebtbackend{1} \dontcountfordebtcalculation };%
+\end{tikzpicture}%
+\newline%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north west, fill=\frontendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south west) {Frontend};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{Heute bist du etwas unkonzentriert.}};%
+\node[anchor=south, text width=5cm] at ($(border.south) + (0cm, 0.5cm)$) {\adddebtfrontend{1} };%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north west, fill=\frontendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south west) {Frontend};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{Das Feature entpuppt sich als kompliziert, sodass ihr es mit in die nächste Iteration nehmt.}};%
+\node[anchor=south, text width=5cm] at ($(border.south) + (0cm, 0.5cm)$) {\returntobacklog{\frontend-\feature}{3}{\technicaldebtfrontend} Sie \underline{\textbf{muss}} in der nächsten Iteration ausgewählt werden. };%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north west, fill=\frontendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south west) {Frontend};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{Das Feature ist abgeschlossen, aber leider sind die Fehler unterlaufen.}};%
+\node[anchor=south, text width=5cm] at ($(border.south) + (0cm, 0.5cm)$) {\addbugs{2} };%
+\end{tikzpicture}%
+\newline%
+\end{center}%
+\newpage%
+\begin{center}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north west, fill=\frontendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south west) {Frontend};%
+\node[anchor=south, text width=5cm, font=\large] at ($(border.south) + (0cm, 0.5cm)$) {\textit{Balkendiagramm für Ein- und Ausgaben je Kategorie}};%
+\node[anchor=north, minimum width = 5cm, minimum height = 2.1cm, draw, rounded corners] (costbox) at ($(frontnamebox.south) + (0cm, -2cm)$) {};\node[anchor=west, minimum width = 2.5cm, minimum height = 2.1cm] (costboxwest) at (costbox.west) {};\node[anchor=east, minimum width = 2.5cm, minimum height = 2.1cm] (costboxeast) at (costbox.east) {};\node[anchor=west, fill=white, font=\large] at ($(costbox.north west) + (0.25cm, 0cm)$) {\textkosten};\node[anchor = center, font=\Huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor=center, font=\Large] at (costbox.center) {+};\node[anchor = west, font=\Huge] at ($(costboxeast.west) + (0.25cm, 0cm)$) {1};\node[anchor=north west, font=\Large] at ($(costboxeast.north west) + (0.75cm, -0.4cm)$) {\emoji{teddy-bear}};\node[anchor=north west, draw, circle, fill=\frontendcolor, minimum size = 0.5cm] at ($(costboxeast.north west) + (1.5cm, -1.25cm)$) {};\draw ($(costboxeast.south west) + (0.9cm, 0.55cm)$) -- ($(costboxeast.north east) + (-0.6cm, -0.55cm)$);%
+\node[anchor=center, draw, rounded corners, minimum width = 1.5cm, minimum height = 1.5cm] (effectbox) at ($(costbox.south) + (0cm, -1cm)$) {};\node[anchor=center, single arrow, draw, fill=white, rotate=270, minimum height=1cm, minimum width=1cm] at (effectbox.center) {};%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north west, fill=\frontendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south west) {Frontend};%
+\node[anchor=south, text width=5cm, font=\large] at ($(border.south) + (0cm, 0.5cm)$) {\textit{Anpassungen an das Corporate Design}};%
+\node[anchor=north, minimum width = 5cm, minimum height = 2.1cm, draw, rounded corners] (costbox) at ($(frontnamebox.south) + (0cm, -2cm)$) {};\node[anchor=west, minimum width = 2.5cm, minimum height = 2.1cm] (costboxwest) at (costbox.west) {};\node[anchor=east, minimum width = 2.5cm, minimum height = 2.1cm] (costboxeast) at (costbox.east) {};\node[anchor=west, fill=white, font=\large] at ($(costbox.north west) + (0.25cm, 0cm)$) {\textkosten};\node[anchor = center, font=\Huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor=center, font=\Large] at (costbox.center) {+};\node[anchor = west, font=\Huge] at ($(costboxeast.west) + (0.25cm, 0cm)$) {1};\node[anchor=north west, font=\Large] at ($(costboxeast.north west) + (0.75cm, -0.4cm)$) {\emoji{teddy-bear}};\node[anchor=north west, draw, circle, fill=\frontendcolor, minimum size = 0.5cm] at ($(costboxeast.north west) + (1.5cm, -1.25cm)$) {};\draw ($(costboxeast.south west) + (0.9cm, 0.55cm)$) -- ($(costboxeast.north east) + (-0.6cm, -0.55cm)$);%
+\node[anchor=center, draw, rounded corners, minimum width = 1.5cm, minimum height = 1.5cm] (effectbox) at ($(costbox.south) + (0cm, -1cm)$) {};\node[anchor=center, single arrow, draw, fill=white, rotate=270, minimum height=1cm, minimum width=1cm] at (effectbox.center) {};%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north east, fill=\backendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south east) {Backend};%
+\node[anchor=south, text width=5cm, font=\large] at ($(border.south) + (0cm, 0.5cm)$) {\textit{Automatische Erinnerungen per E-Mail}};%
+\node[anchor=north, minimum width = 5cm, minimum height = 2.1cm, draw, rounded corners] (costbox) at ($(frontnamebox.south) + (0cm, -2cm)$) {};\node[anchor=west, minimum width = 2.5cm, minimum height = 2.1cm] (costboxwest) at (costbox.west) {};\node[anchor=east, minimum width = 2.5cm, minimum height = 2.1cm] (costboxeast) at (costbox.east) {};\node[anchor=west, fill=white, font=\large] at ($(costbox.north west) + (0.25cm, 0cm)$) {\textkosten};\node[anchor = center, font=\Huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor=center, font=\Large] at (costbox.center) {+};\node[anchor = west, font=\Huge] at ($(costboxeast.west) + (0.25cm, 0cm)$) {1};\node[anchor=north west, font=\Large] at ($(costboxeast.north west) + (0.75cm, -0.4cm)$) {\emoji{teddy-bear}};\node[anchor=north west, draw, circle, fill=\backendcolor, minimum size = 0.5cm] at ($(costboxeast.north west) + (1.5cm, -1.25cm)$) {};\draw ($(costboxeast.south west) + (0.9cm, 0.55cm)$) -- ($(costboxeast.north east) + (-0.6cm, -0.55cm)$);%
+\node[anchor=center, draw, rounded corners, minimum width = 1.5cm, minimum height = 1.5cm] (effectbox) at ($(costbox.south) + (0cm, -1cm)$) {};\node[anchor=center, single arrow, draw, fill=white, rotate=90, minimum height=1cm, minimum width=1cm] at (effectbox.center) {};%
+\end{tikzpicture}%
+\newline%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north west, fill=\frontendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south west) {Frontend};%
+\node[anchor=south, text width=5cm, font=\large] at ($(border.south) + (0cm, 0.5cm)$) {\textit{Alle Texte freundlicher machen}};%
+\node[anchor=north, minimum width = 5cm, minimum height = 2.1cm, draw, rounded corners] (costbox) at ($(frontnamebox.south) + (0cm, -2cm)$) {};\node[anchor=west, minimum width = 2.5cm, minimum height = 2.1cm] (costboxwest) at (costbox.west) {};\node[anchor=east, minimum width = 2.5cm, minimum height = 2.1cm] (costboxeast) at (costbox.east) {};\node[anchor=west, fill=white, font=\large] at ($(costbox.north west) + (0.25cm, 0cm)$) {\textkosten};\node[anchor = center, font=\Huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor=center, font=\Large] at (costbox.center) {+};\node[anchor = west, font=\Huge] at ($(costboxeast.west) + (0.25cm, 0cm)$) {1};\node[anchor=north west, font=\Large] at ($(costboxeast.north west) + (0.75cm, -0.4cm)$) {\emoji{teddy-bear}};\node[anchor=north west, draw, circle, fill=\frontendcolor, minimum size = 0.5cm] at ($(costboxeast.north west) + (1.5cm, -1.25cm)$) {};\draw ($(costboxeast.south west) + (0.9cm, 0.55cm)$) -- ($(costboxeast.north east) + (-0.6cm, -0.55cm)$);%
+\node[anchor=center, draw, rounded corners, minimum width = 1.5cm, minimum height = 1.5cm] (effectbox) at ($(costbox.south) + (0cm, -1cm)$) {};\node[anchor=center, single arrow, draw, fill=white, rotate=90, minimum height=1cm, minimum width=1cm] at (effectbox.center) {};%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north east, fill=\backendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south east) {Backend};%
+\node[anchor=south, text width=5cm, font=\large] at ($(border.south) + (0cm, 0.5cm)$) {\textit{Anbindung an die Buchhaltungssoftware}};%
+\node[anchor=north, minimum width = 5cm, minimum height = 2.1cm, draw, rounded corners] (costbox) at ($(frontnamebox.south) + (0cm, -2cm)$) {};\node[anchor=west, minimum width = 2.5cm, minimum height = 2.1cm] (costboxwest) at (costbox.west) {};\node[anchor=east, minimum width = 2.5cm, minimum height = 2.1cm] (costboxeast) at (costbox.east) {};\node[anchor=west, fill=white, font=\large] at ($(costbox.north west) + (0.25cm, 0cm)$) {\textkosten};\node[anchor = east, font=\Huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor = west, font=\Huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor=center, font=\Large] at (costbox.center) {+};\node[anchor = west, font=\Huge] at ($(costboxeast.west) + (0.25cm, 0cm)$) {1};\node[anchor=north west, font=\Large] at ($(costboxeast.north west) + (0.75cm, -0.4cm)$) {\emoji{teddy-bear}};\node[anchor=north west, draw, circle, fill=\backendcolor, minimum size = 0.5cm] at ($(costboxeast.north west) + (1.5cm, -1.25cm)$) {};\draw ($(costboxeast.south west) + (0.9cm, 0.55cm)$) -- ($(costboxeast.north east) + (-0.6cm, -0.55cm)$);%
+\node[anchor=center, draw, rounded corners, minimum width = 1.5cm, minimum height = 1.5cm] (effectbox) at ($(costbox.south) + (0cm, -1cm)$) {};\node[anchor=center, fill=white, font=\fontsize{30}{30}\selectfont] at (effectbox.center) {?};%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north west, fill=\frontendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south west) {Frontend};%
+\node[anchor=south, text width=5cm, font=\large] at ($(border.south) + (0cm, 0.5cm)$) {\textit{Hinzufügen von Keyboard-Shortcuts}};%
+\node[anchor=north, minimum width = 5cm, minimum height = 2.1cm, draw, rounded corners] (costbox) at ($(frontnamebox.south) + (0cm, -2cm)$) {};\node[anchor=west, minimum width = 2.5cm, minimum height = 2.1cm] (costboxwest) at (costbox.west) {};\node[anchor=east, minimum width = 2.5cm, minimum height = 2.1cm] (costboxeast) at (costbox.east) {};\node[anchor=west, fill=white, font=\large] at ($(costbox.north west) + (0.25cm, 0cm)$) {\textkosten};\node[anchor = east, font=\Huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor = west, font=\Huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor=center, font=\Large] at (costbox.center) {+};\node[anchor = west, font=\Huge] at ($(costboxeast.west) + (0.25cm, 0cm)$) {1};\node[anchor=north west, font=\Large] at ($(costboxeast.north west) + (0.75cm, -0.4cm)$) {\emoji{teddy-bear}};\node[anchor=north west, draw, circle, fill=\frontendcolor, minimum size = 0.5cm] at ($(costboxeast.north west) + (1.5cm, -1.25cm)$) {};\draw ($(costboxeast.south west) + (0.9cm, 0.55cm)$) -- ($(costboxeast.north east) + (-0.6cm, -0.55cm)$);%
+\node[anchor=center, draw, rounded corners, minimum width = 1.5cm, minimum height = 1.5cm] (effectbox) at ($(costbox.south) + (0cm, -1cm)$) {};\node[anchor=center, fill=white, font=\fontsize{30}{30}\selectfont] at (effectbox.center) {?};%
+\end{tikzpicture}%
+\newline%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north east, fill=\backendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south east) {Backend};%
+\node[anchor=south, text width=5cm, font=\large] at ($(border.south) + (0cm, 0.5cm)$) {\textit{Verbessern der Performance des Import-parsers}};%
+\node[anchor=north, minimum width = 5cm, minimum height = 2.1cm, draw, rounded corners] (costbox) at ($(frontnamebox.south) + (0cm, -2cm)$) {};\node[anchor=west, minimum width = 2.5cm, minimum height = 2.1cm] (costboxwest) at (costbox.west) {};\node[anchor=east, minimum width = 2.5cm, minimum height = 2.1cm] (costboxeast) at (costbox.east) {};\node[anchor=west, fill=white, font=\large] at ($(costbox.north west) + (0.25cm, 0cm)$) {\textkosten};\node[anchor = east, font=\Huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor = west, font=\Huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor=center, font=\Large] at (costbox.center) {+};\node[anchor = west, font=\Huge] at ($(costboxeast.west) + (0.25cm, 0cm)$) {1};\node[anchor=north west, font=\Large] at ($(costboxeast.north west) + (0.75cm, -0.4cm)$) {\emoji{teddy-bear}};\node[anchor=north west, draw, circle, fill=\backendcolor, minimum size = 0.5cm] at ($(costboxeast.north west) + (1.5cm, -1.25cm)$) {};\draw ($(costboxeast.south west) + (0.9cm, 0.55cm)$) -- ($(costboxeast.north east) + (-0.6cm, -0.55cm)$);%
+\node[anchor=center, draw, rounded corners, minimum width = 1.5cm, minimum height = 1.5cm] (effectbox) at ($(costbox.south) + (0cm, -1cm)$) {};\node[anchor=center, single arrow, draw, fill=white, rotate=270, minimum height=1cm, minimum width=1cm] at (effectbox.center) {};%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north east, fill=\backendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south east) {Backend};%
+\node[anchor=south, text width=5cm, font=\large] at ($(border.south) + (0cm, 0.5cm)$) {\textit{Serverseitige Nutzungsstatistiken erfassen}};%
+\node[anchor=north, minimum width = 5cm, minimum height = 2.1cm, draw, rounded corners] (costbox) at ($(frontnamebox.south) + (0cm, -2cm)$) {};\node[anchor=west, minimum width = 2.5cm, minimum height = 2.1cm] (costboxwest) at (costbox.west) {};\node[anchor=east, minimum width = 2.5cm, minimum height = 2.1cm] (costboxeast) at (costbox.east) {};\node[anchor=west, fill=white, font=\large] at ($(costbox.north west) + (0.25cm, 0cm)$) {\textkosten};\node[anchor = east, font=\Huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor = west, font=\Huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor=center, font=\Large] at (costbox.center) {+};\node[anchor = west, font=\Huge] at ($(costboxeast.west) + (0.25cm, 0cm)$) {1};\node[anchor=north west, font=\Large] at ($(costboxeast.north west) + (0.75cm, -0.4cm)$) {\emoji{teddy-bear}};\node[anchor=north west, draw, circle, fill=\backendcolor, minimum size = 0.5cm] at ($(costboxeast.north west) + (1.5cm, -1.25cm)$) {};\draw ($(costboxeast.south west) + (0.9cm, 0.55cm)$) -- ($(costboxeast.north east) + (-0.6cm, -0.55cm)$);%
+\node[anchor=center, draw, rounded corners, minimum width = 1.5cm, minimum height = 1.5cm] (effectbox) at ($(costbox.south) + (0cm, -1cm)$) {};\node[anchor=center, single arrow, draw, fill=white, rotate=90, minimum height=1cm, minimum width=1cm] at (effectbox.center) {};%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north east, fill=\backendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south east) {Backend};%
+\node[anchor=south, text width=5cm, font=\large] at ($(border.south) + (0cm, 0.5cm)$) {\textit{Model für Annotationen zu Berichten hinzufügen}};%
+\node[anchor=north, minimum width = 5cm, minimum height = 2.1cm, draw, rounded corners] (costbox) at ($(frontnamebox.south) + (0cm, -2cm)$) {};\node[anchor=west, minimum width = 2.5cm, minimum height = 2.1cm] (costboxwest) at (costbox.west) {};\node[anchor=east, minimum width = 2.5cm, minimum height = 2.1cm] (costboxeast) at (costbox.east) {};\node[anchor=west, fill=white, font=\large] at ($(costbox.north west) + (0.25cm, 0cm)$) {\textkosten};\node[anchor = east, font=\Huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor = west, font=\Huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor=center, font=\Large] at (costbox.center) {+};\node[anchor = west, font=\Huge] at ($(costboxeast.west) + (0.25cm, 0cm)$) {1};\node[anchor=north west, font=\Large] at ($(costboxeast.north west) + (0.75cm, -0.4cm)$) {\emoji{teddy-bear}};\node[anchor=north west, draw, circle, fill=\backendcolor, minimum size = 0.5cm] at ($(costboxeast.north west) + (1.5cm, -1.25cm)$) {};\draw ($(costboxeast.south west) + (0.9cm, 0.55cm)$) -- ($(costboxeast.north east) + (-0.6cm, -0.55cm)$);%
+\node[anchor=center, draw, rounded corners, minimum width = 1.5cm, minimum height = 1.5cm] (effectbox) at ($(costbox.south) + (0cm, -1cm)$) {};\node[anchor=center, single arrow, draw, fill=white, rotate=90, minimum height=1cm, minimum width=1cm] at (effectbox.center) {};%
+\end{tikzpicture}%
+\newline%
+\end{center}%
+\newpage%
+\begin{center}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north east, fill=\backendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south east) {Backend};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{Gute Arbeit.}};%
+\node[anchor=south, text width=5cm] at ($(border.south) + (0cm, 0.5cm)$) {\dontcountfordebtcalculation };%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north west, fill=\frontendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south west) {Frontend};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{Gerade als du hiermit fertig wurdest, meldet sich \personamathilde\ mit Feedback.}};%
+\node[anchor=south, text width=5cm] at ($(border.south) + (0cm, 0.5cm)$) {\addbug\ };%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north west, fill=\frontendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south west) {Frontend};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{\personaharald\ freut sich über das neue Feature und möchte es direkt weiterentwickelt sehen.}};%
+\node[anchor=south, text width=5cm] at ($(border.south) + (0cm, 0.5cm)$) {\addfeature\ Das so hinzugefügte Feature \underline{\textbf{muss}} in der nächsten Iteration ausgewählt werden. };%
+\end{tikzpicture}%
+\newline%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north west, fill=\frontendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south west) {Frontend};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{Ihr hattet nach diesem Feature noch etwas Zeit und habt euch as Refactoring gesetzt. Dabei wart ihr unkonzentriert, sodass Teile davon neu gemacht werden müssen.}};%
+\node[anchor=south, text width=5cm] at ($(border.south) + (0cm, 0.5cm)$) {\removetemporarystorypoints{1} \removedebtfrontend{1} };%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north east, fill=\backendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south east) {Backend};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{Sehr gut, ein weiteres Feature ist fertig. Da könnt ihr stolz drauf sein.}};%
+\node[anchor=south, text width=5cm] at ($(border.south) + (0cm, 0.5cm)$) {};%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north west, fill=\frontendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south west) {Frontend};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{Das war ein Feature was du schon lange bauen wolltest. Du freust dich sehr, es nun angegangen zu sein. Das ist echt gut für die Motivation.}};%
+\node[anchor=south, text width=5cm] at ($(border.south) + (0cm, 0.5cm)$) {\addpermanentstorypoints{1} };%
+\end{tikzpicture}%
+\newline%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north east, fill=\backendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south east) {Backend};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{Dieses Feature integriert sich sehr gut in die existierende Codebasis.}};%
+\node[anchor=south, text width=5cm] at ($(border.south) + (0cm, 0.5cm)$) {\dontcountfordebtcalculation };%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north east, fill=\backendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south east) {Backend};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{Während ihr dieses Feature implementiert habt kam \personaharald\ auf euch zu und hat euch neue IT-Ausstattung übergeben. Das macht euch in Zunkft die Arbeit leichter.}};%
+\node[anchor=south, text width=5cm] at ($(border.south) + (0cm, 0.5cm)$) {\addpermanentstorypoints{2} };%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north east, fill=\backendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south east) {Backend};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{Beim Implementieren dieses Features hast du im Legacy-Code ein Problem gefunden.}};%
+\node[anchor=south, text width=5cm] at ($(border.south) + (0cm, 0.5cm)$) {\addbug\ };%
+\end{tikzpicture}%
+\newline%
+\end{center}%
+\newpage%
+\begin{center}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north east, fill=\backendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south east) {Backend};%
+\node[anchor=south, text width=5cm, font=\large] at ($(border.south) + (0cm, 0.5cm)$) {\textit{pdf-Export von Berichten}};%
+\node[anchor=north, minimum width = 5cm, minimum height = 2.1cm, draw, rounded corners] (costbox) at ($(frontnamebox.south) + (0cm, -2cm)$) {};\node[anchor=west, minimum width = 2.5cm, minimum height = 2.1cm] (costboxwest) at (costbox.west) {};\node[anchor=east, minimum width = 2.5cm, minimum height = 2.1cm] (costboxeast) at (costbox.east) {};\node[anchor=west, fill=white, font=\large] at ($(costbox.north west) + (0.25cm, 0cm)$) {\textkosten};\node[anchor = east, font=\Huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor = west, font=\Huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor=center, font=\Large] at (costbox.center) {+};\node[anchor = west, font=\Huge] at ($(costboxeast.west) + (0.25cm, 0cm)$) {1};\node[anchor=north west, font=\Large] at ($(costboxeast.north west) + (0.75cm, -0.4cm)$) {\emoji{teddy-bear}};\node[anchor=north west, draw, circle, fill=\backendcolor, minimum size = 0.5cm] at ($(costboxeast.north west) + (1.5cm, -1.25cm)$) {};\draw ($(costboxeast.south west) + (0.9cm, 0.55cm)$) -- ($(costboxeast.north east) + (-0.6cm, -0.55cm)$);%
+\node[anchor=center, draw, rounded corners, minimum width = 1.5cm, minimum height = 1.5cm] (effectbox) at ($(costbox.south) + (0cm, -1cm)$) {};\node[anchor=center, single arrow, draw, fill=white, rotate=90, minimum height=1cm, minimum width=1cm] at (effectbox.center) {};%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north west, fill=\frontendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south west) {Frontend};%
+\node[anchor=south, text width=5cm, font=\large] at ($(border.south) + (0cm, 0.5cm)$) {\textit{Nahtloser Wechsel zwischen Visualisierungen}};%
+\node[anchor=north, minimum width = 5cm, minimum height = 2.1cm, draw, rounded corners] (costbox) at ($(frontnamebox.south) + (0cm, -2cm)$) {};\node[anchor=west, minimum width = 2.5cm, minimum height = 2.1cm] (costboxwest) at (costbox.west) {};\node[anchor=east, minimum width = 2.5cm, minimum height = 2.1cm] (costboxeast) at (costbox.east) {};\node[anchor=west, fill=white, font=\large] at ($(costbox.north west) + (0.25cm, 0cm)$) {\textkosten};\node[anchor = east, font=\Huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor = west, font=\Huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor=center, font=\Large] at (costbox.center) {+};\node[anchor = west, font=\Huge] at ($(costboxeast.west) + (0.25cm, 0cm)$) {1};\node[anchor=north west, font=\Large] at ($(costboxeast.north west) + (0.75cm, -0.4cm)$) {\emoji{teddy-bear}};\node[anchor=north west, draw, circle, fill=\frontendcolor, minimum size = 0.5cm] at ($(costboxeast.north west) + (1.5cm, -1.25cm)$) {};\draw ($(costboxeast.south west) + (0.9cm, 0.55cm)$) -- ($(costboxeast.north east) + (-0.6cm, -0.55cm)$);%
+\node[anchor=center, draw, rounded corners, minimum width = 1.5cm, minimum height = 1.5cm] (effectbox) at ($(costbox.south) + (0cm, -1cm)$) {};\node[anchor=center, single arrow, draw, fill=white, rotate=90, minimum height=1cm, minimum width=1cm] at (effectbox.center) {};%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north west, fill=\frontendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south west) {Frontend};%
+\node[anchor=south, text width=5cm, font=\large] at ($(border.south) + (0cm, 0.5cm)$) {\textit{Übersicht im Side-panel hinzufügen}};%
+\node[anchor=north, minimum width = 5cm, minimum height = 2.1cm, draw, rounded corners] (costbox) at ($(frontnamebox.south) + (0cm, -2cm)$) {};\node[anchor=west, minimum width = 2.5cm, minimum height = 2.1cm] (costboxwest) at (costbox.west) {};\node[anchor=east, minimum width = 2.5cm, minimum height = 2.1cm] (costboxeast) at (costbox.east) {};\node[anchor=west, fill=white, font=\large] at ($(costbox.north west) + (0.25cm, 0cm)$) {\textkosten};\node[anchor = east, font=\Huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor = west, font=\Huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor=center, font=\Large] at (costbox.center) {+};\node[anchor = west, font=\Huge] at ($(costboxeast.west) + (0.25cm, 0cm)$) {1};\node[anchor=north west, font=\Large] at ($(costboxeast.north west) + (0.75cm, -0.4cm)$) {\emoji{teddy-bear}};\node[anchor=north west, draw, circle, fill=\frontendcolor, minimum size = 0.5cm] at ($(costboxeast.north west) + (1.5cm, -1.25cm)$) {};\draw ($(costboxeast.south west) + (0.9cm, 0.55cm)$) -- ($(costboxeast.north east) + (-0.6cm, -0.55cm)$);%
+\node[anchor=center, draw, rounded corners, minimum width = 1.5cm, minimum height = 1.5cm] (effectbox) at ($(costbox.south) + (0cm, -1cm)$) {};\node[anchor=center, single arrow, draw, fill=white, rotate=90, minimum height=1cm, minimum width=1cm] at (effectbox.center) {};%
+\end{tikzpicture}%
+\newline%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north west, fill=\frontendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south west) {Frontend};%
+\node[anchor=south, text width=5cm, font=\large] at ($(border.south) + (0cm, 0.5cm)$) {\textit{Neues Design der Suchfilter implementieren}};%
+\node[anchor=north, minimum width = 5cm, minimum height = 2.1cm, draw, rounded corners] (costbox) at ($(frontnamebox.south) + (0cm, -2cm)$) {};\node[anchor=west, minimum width = 2.5cm, minimum height = 2.1cm] (costboxwest) at (costbox.west) {};\node[anchor=east, minimum width = 2.5cm, minimum height = 2.1cm] (costboxeast) at (costbox.east) {};\node[anchor=west, fill=white, font=\large] at ($(costbox.north west) + (0.25cm, 0cm)$) {\textkosten};\node[anchor = south, font=\huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor = north west, font=\huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor = north east, font=\huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor=center, font=\Large] at (costbox.center) {+};\node[anchor = west, font=\Huge] at ($(costboxeast.west) + (0.25cm, 0cm)$) {1};\node[anchor=north west, font=\Large] at ($(costboxeast.north west) + (0.75cm, -0.4cm)$) {\emoji{teddy-bear}};\node[anchor=north west, draw, circle, fill=\frontendcolor, minimum size = 0.5cm] at ($(costboxeast.north west) + (1.5cm, -1.25cm)$) {};\draw ($(costboxeast.south west) + (0.9cm, 0.55cm)$) -- ($(costboxeast.north east) + (-0.6cm, -0.55cm)$);%
+\node[anchor=center, draw, rounded corners, minimum width = 1.5cm, minimum height = 1.5cm] (effectbox) at ($(costbox.south) + (0cm, -1cm)$) {};\node[anchor=center, fill=white, font=\fontsize{30}{30}\selectfont] at (effectbox.center) {?};%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north east, fill=\backendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south east) {Backend};%
+\node[anchor=south, text width=5cm, font=\large] at ($(border.south) + (0cm, 0.5cm)$) {\textit{Implementieren des Lebenszyklus von Berichten}};%
+\node[anchor=north, minimum width = 5cm, minimum height = 2.1cm, draw, rounded corners] (costbox) at ($(frontnamebox.south) + (0cm, -2cm)$) {};\node[anchor=west, minimum width = 2.5cm, minimum height = 2.1cm] (costboxwest) at (costbox.west) {};\node[anchor=east, minimum width = 2.5cm, minimum height = 2.1cm] (costboxeast) at (costbox.east) {};\node[anchor=west, fill=white, font=\large] at ($(costbox.north west) + (0.25cm, 0cm)$) {\textkosten};\node[anchor = south, font=\huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor = north west, font=\huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor = north east, font=\huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor=center, font=\Large] at (costbox.center) {+};\node[anchor = west, font=\Huge] at ($(costboxeast.west) + (0.25cm, 0cm)$) {1};\node[anchor=north west, font=\Large] at ($(costboxeast.north west) + (0.75cm, -0.4cm)$) {\emoji{teddy-bear}};\node[anchor=north west, draw, circle, fill=\backendcolor, minimum size = 0.5cm] at ($(costboxeast.north west) + (1.5cm, -1.25cm)$) {};\draw ($(costboxeast.south west) + (0.9cm, 0.55cm)$) -- ($(costboxeast.north east) + (-0.6cm, -0.55cm)$);%
+\node[anchor=center, draw, rounded corners, minimum width = 1.5cm, minimum height = 1.5cm] (effectbox) at ($(costbox.south) + (0cm, -1cm)$) {};\node[anchor=center, single arrow, draw, fill=white, rotate=270, minimum height=1cm, minimum width=1cm] at (effectbox.center) {};%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north west, fill=\frontendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south west) {Frontend};%
+\node[anchor=south, text width=5cm, font=\large] at ($(border.south) + (0cm, 0.5cm)$) {\textit{Statistikanfragen für das Controlling ermöglichen}};%
+\node[anchor=north, minimum width = 5cm, minimum height = 2.1cm, draw, rounded corners] (costbox) at ($(frontnamebox.south) + (0cm, -2cm)$) {};\node[anchor=west, minimum width = 2.5cm, minimum height = 2.1cm] (costboxwest) at (costbox.west) {};\node[anchor=east, minimum width = 2.5cm, minimum height = 2.1cm] (costboxeast) at (costbox.east) {};\node[anchor=west, fill=white, font=\large] at ($(costbox.north west) + (0.25cm, 0cm)$) {\textkosten};\node[anchor = south, font=\huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor = north west, font=\huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor = north east, font=\huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor=center, font=\Large] at (costbox.center) {+};\node[anchor = west, font=\Huge] at ($(costboxeast.west) + (0.25cm, 0cm)$) {1};\node[anchor=north west, font=\Large] at ($(costboxeast.north west) + (0.75cm, -0.4cm)$) {\emoji{teddy-bear}};\node[anchor=north west, draw, circle, fill=\frontendcolor, minimum size = 0.5cm] at ($(costboxeast.north west) + (1.5cm, -1.25cm)$) {};\draw ($(costboxeast.south west) + (0.9cm, 0.55cm)$) -- ($(costboxeast.north east) + (-0.6cm, -0.55cm)$);%
+\node[anchor=center, draw, rounded corners, minimum width = 1.5cm, minimum height = 1.5cm] (effectbox) at ($(costbox.south) + (0cm, -1cm)$) {};\node[anchor=center, single arrow, draw, fill=white, rotate=270, minimum height=1cm, minimum width=1cm] at (effectbox.center) {};%
+\end{tikzpicture}%
+\newline%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north west, fill=\frontendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south west) {Frontend};%
+\node[anchor=south, text width=5cm, font=\large] at ($(border.south) + (0cm, 0.5cm)$) {\textit{Onboarding-Tour für neue Nutzer:innen}};%
+\node[anchor=north, minimum width = 5cm, minimum height = 2.1cm, draw, rounded corners] (costbox) at ($(frontnamebox.south) + (0cm, -2cm)$) {};\node[anchor=west, minimum width = 2.5cm, minimum height = 2.1cm] (costboxwest) at (costbox.west) {};\node[anchor=east, minimum width = 2.5cm, minimum height = 2.1cm] (costboxeast) at (costbox.east) {};\node[anchor=west, fill=white, font=\large] at ($(costbox.north west) + (0.25cm, 0cm)$) {\textkosten};\node[anchor = south, font=\huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor = north west, font=\huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor = north east, font=\huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor=center, font=\Large] at (costbox.center) {+};\node[anchor = west, font=\Huge] at ($(costboxeast.west) + (0.25cm, 0cm)$) {1};\node[anchor=north west, font=\Large] at ($(costboxeast.north west) + (0.75cm, -0.4cm)$) {\emoji{teddy-bear}};\node[anchor=north west, draw, circle, fill=\frontendcolor, minimum size = 0.5cm] at ($(costboxeast.north west) + (1.5cm, -1.25cm)$) {};\draw ($(costboxeast.south west) + (0.9cm, 0.55cm)$) -- ($(costboxeast.north east) + (-0.6cm, -0.55cm)$);%
+\node[anchor=center, draw, rounded corners, minimum width = 1.5cm, minimum height = 1.5cm] (effectbox) at ($(costbox.south) + (0cm, -1cm)$) {};\node[anchor=center, single arrow, draw, fill=white, rotate=90, minimum height=1cm, minimum width=1cm] at (effectbox.center) {};%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north west, fill=\frontendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south west) {Frontend};%
+\node[anchor=south, text width=5cm, font=\large] at ($(border.south) + (0cm, 0.5cm)$) {\textit{Einpflegen von Basisdaten}};%
+\node[anchor=north, minimum width = 5cm, minimum height = 2.1cm, draw, rounded corners] (costbox) at ($(frontnamebox.south) + (0cm, -2cm)$) {};\node[anchor=west, minimum width = 2.5cm, minimum height = 2.1cm] (costboxwest) at (costbox.west) {};\node[anchor=east, minimum width = 2.5cm, minimum height = 2.1cm] (costboxeast) at (costbox.east) {};\node[anchor=west, fill=white, font=\large] at ($(costbox.north west) + (0.25cm, 0cm)$) {\textkosten};\node[anchor = center, font=\Huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor=center, font=\Large] at (costbox.center) {+};\node[anchor = west, font=\Huge] at ($(costboxeast.west) + (0.25cm, 0cm)$) {1};\node[anchor=north west, font=\Large] at ($(costboxeast.north west) + (0.75cm, -0.4cm)$) {\emoji{teddy-bear}};\node[anchor=north west, draw, circle, fill=\frontendcolor, minimum size = 0.5cm] at ($(costboxeast.north west) + (1.5cm, -1.25cm)$) {};\draw ($(costboxeast.south west) + (0.9cm, 0.55cm)$) -- ($(costboxeast.north east) + (-0.6cm, -0.55cm)$);%
+\node[anchor=center, draw, rounded corners, minimum width = 1.5cm, minimum height = 1.5cm] (effectbox) at ($(costbox.south) + (0cm, -1cm)$) {};\node[anchor=center, single arrow, draw, fill=white, rotate=270, minimum height=1cm, minimum width=1cm] at (effectbox.center) {};%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north east, fill=\backendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south east) {Backend};%
+\node[anchor=south, text width=5cm, font=\large] at ($(border.south) + (0cm, 0.5cm)$) {\textit{LDAP-Integration}};%
+\node[anchor=north, minimum width = 5cm, minimum height = 2.1cm, draw, rounded corners] (costbox) at ($(frontnamebox.south) + (0cm, -2cm)$) {};\node[anchor=west, minimum width = 2.5cm, minimum height = 2.1cm] (costboxwest) at (costbox.west) {};\node[anchor=east, minimum width = 2.5cm, minimum height = 2.1cm] (costboxeast) at (costbox.east) {};\node[anchor=west, fill=white, font=\large] at ($(costbox.north west) + (0.25cm, 0cm)$) {\textkosten};\node[anchor = east, font=\Huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor = west, font=\Huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor=center, font=\Large] at (costbox.center) {+};\node[anchor = west, font=\Huge] at ($(costboxeast.west) + (0.25cm, 0cm)$) {1};\node[anchor=north west, font=\Large] at ($(costboxeast.north west) + (0.75cm, -0.4cm)$) {\emoji{teddy-bear}};\node[anchor=north west, draw, circle, fill=\backendcolor, minimum size = 0.5cm] at ($(costboxeast.north west) + (1.5cm, -1.25cm)$) {};\draw ($(costboxeast.south west) + (0.9cm, 0.55cm)$) -- ($(costboxeast.north east) + (-0.6cm, -0.55cm)$);%
+\node[anchor=center, draw, rounded corners, minimum width = 1.5cm, minimum height = 1.5cm] (effectbox) at ($(costbox.south) + (0cm, -1cm)$) {};\node[anchor=center, fill=white, font=\fontsize{30}{30}\selectfont] at (effectbox.center) {?};%
+\end{tikzpicture}%
+\newline%
+\end{center}%
+\newpage%
+\begin{center}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north west, fill=\frontendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south west) {Frontend};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{Dieses Feature zu bearbeiten ging schneller als erwartet. Entsprechend hast du die Zeit genutzt, weiterzuarbeiten.}};%
+\node[anchor=south, text width=5cm] at ($(border.south) + (0cm, 0.5cm)$) {Ein \feature\ aus dem Backlog mit \kosten{1} gilt als implementiert ohne Effektaktivierung. Es zählt aber für die Berechnung des Technical Debt. };%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north west, fill=\frontendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south west) {Frontend};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{Beim Implementieren dieses Features ist euch Code aufgefallen, der nie genutzt wird. Nach Rücksprache mit dem Team hast du ihn entfernt.}};%
+\node[anchor=south, text width=5cm] at ($(border.south) + (0cm, 0.5cm)$) {\removedebtfrontend{1} };%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north east, fill=\backendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south east) {Backend};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{Dieses Feature war einfacher zu implementieren als erwartet. Die freie Zeit hast du genutzt, um ein wenig zu refactorn.}};%
+\node[anchor=south, text width=5cm] at ($(border.south) + (0cm, 0.5cm)$) {\removedebtbackend{1} \dontcountfordebtcalculation };%
+\end{tikzpicture}%
+\newline%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north west, fill=\frontendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south west) {Frontend};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{Die Sicherheitsabteilung hat in diesem Feature ein Problem gefunden.}};%
+\node[anchor=south, text width=5cm] at ($(border.south) + (0cm, 0.5cm)$) {\addbug\ };%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north east, fill=\backendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south east) {Backend};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{Als du gerade fertig warst, stürzt der Rechner ab und die Arbeit von heute ist vernichtet.}};%
+\node[anchor=south, text width=5cm] at ($(border.south) + (0cm, 0.5cm)$) {\returntobacklog{\backend-\feature}{2}{\technicaldebtbackend} };%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north west, fill=\frontendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south west) {Frontend};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{Während der Bearbeitung bemerkt ihr, dass ihr noch ein neues Design für eine Komponente braucht. Das UX-Team setzt sich dran.}};%
+\node[anchor=south, text width=5cm] at ($(border.south) + (0cm, 0.5cm)$) {\returntobacklog{\frontend-\feature}{1}{\technicaldebtfrontend} Sie \underline{\textbf{darf nicht}} in der nächsten Iteration ausgewählt werden. };%
+\end{tikzpicture}%
+\newline%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north east, fill=\backendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south east) {Backend};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{Für dieses Feature musstet ihr Shotgun Surgery betreiben: viele kleine Änderungen an vielen Stellen. Vielleicht wird es Zeit zu refactorn.}};%
+\node[anchor=south, text width=5cm] at ($(border.south) + (0cm, 0.5cm)$) {\adddebtbackend{1} \adddebtfrontend{1} };%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north west, fill=\frontendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south west) {Frontend};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{Die Implementierung dieses Features hatte viel schnelles Tippen bedeutet, sodass jemand von euch mit einer Sehnenscheidenentzündung ersteinmal ausfällt.}};%
+\node[anchor=south, text width=5cm] at ($(border.south) + (0cm, 0.5cm)$) {\removepermanentstorypoints{2} };%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\feature};%
+\node[anchor=north west, fill=\frontendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south west) {Frontend};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{Das Feature war ein ganz schöner Brocken. Die Fertigstellung hat euch aber als Team zusammengeschweißt, sodass ihr besser arbeitet.}};%
+\node[anchor=south, text width=5cm] at ($(border.south) + (0cm, 0.5cm)$) {\addpermanentstorypoints{1} };%
+\end{tikzpicture}%
+\newline%
+\end{center}%
+\newpage%
+\begin{center}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\bug};%
+\node[anchor=north west, fill=\frontendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south west) {Frontend};%
+\node[anchor=south, text width=5cm, font=\large] at ($(border.south) + (0cm, 0.5cm)$) {\textit{Falscher Nutzername wird im Profil angezeigt}};%
+\node[anchor=north, minimum width = 5cm, minimum height = 2.1cm, draw, rounded corners] (costbox) at ($(frontnamebox.south) + (0cm, -2cm)$) {};\node[anchor=west, minimum width = 2.5cm, minimum height = 2.1cm] (costboxwest) at (costbox.west) {};\node[anchor=east, minimum width = 2.5cm, minimum height = 2.1cm] (costboxeast) at (costbox.east) {};\node[anchor=west, fill=white, font=\large] at ($(costbox.north west) + (0.25cm, 0cm)$) {\textkosten};\node[anchor = east, font=\Huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor = west, font=\Huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor=center, font=\Large] at (costbox.center) {+};\node[anchor = west, font=\Huge] at ($(costboxeast.west) + (0.25cm, 0cm)$) {1};\node[anchor=north west, font=\Large] at ($(costboxeast.north west) + (0.75cm, -0.4cm)$) {\emoji{teddy-bear}};\node[anchor=north west, draw, circle, fill=\frontendcolor, minimum size = 0.5cm] at ($(costboxeast.north west) + (1.5cm, -1.25cm)$) {};\draw ($(costboxeast.south west) + (0.9cm, 0.55cm)$) -- ($(costboxeast.north east) + (-0.6cm, -0.55cm)$);%
+\node[anchor=center, draw, rounded corners, minimum width = 1.5cm, minimum height = 1.5cm] (effectbox) at ($(costbox.south) + (0cm, -1cm)$) {};\node[anchor=center, fill=white, font=\fontsize{30}{30}\selectfont] at (effectbox.center) {?};%
+\node[anchor=north east, font=\Large, minimum width=3cm] at (frontnamebox.south east) {Start};%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\bug};%
+\node[anchor=north east, fill=\backendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south east) {Backend};%
+\node[anchor=south, text width=5cm, font=\large] at ($(border.south) + (0cm, 0.5cm)$) {\textit{Export der Berichte zu Word funktioniert}};%
+\node[anchor=north, minimum width = 5cm, minimum height = 2.1cm, draw, rounded corners] (costbox) at ($(frontnamebox.south) + (0cm, -2cm)$) {};\node[anchor=west, minimum width = 2.5cm, minimum height = 2.1cm] (costboxwest) at (costbox.west) {};\node[anchor=east, minimum width = 2.5cm, minimum height = 2.1cm] (costboxeast) at (costbox.east) {};\node[anchor=west, fill=white, font=\large] at ($(costbox.north west) + (0.25cm, 0cm)$) {\textkosten};\node[anchor = center, font=\Huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor=center, font=\Large] at (costbox.center) {+};\node[anchor = west, font=\Huge] at ($(costboxeast.west) + (0.25cm, 0cm)$) {1};\node[anchor=north west, font=\Large] at ($(costboxeast.north west) + (0.75cm, -0.4cm)$) {\emoji{teddy-bear}};\node[anchor=north west, draw, circle, fill=\backendcolor, minimum size = 0.5cm] at ($(costboxeast.north west) + (1.5cm, -1.25cm)$) {};\draw ($(costboxeast.south west) + (0.9cm, 0.55cm)$) -- ($(costboxeast.north east) + (-0.6cm, -0.55cm)$);%
+\node[anchor=center, draw, rounded corners, minimum width = 1.5cm, minimum height = 1.5cm] (effectbox) at ($(costbox.south) + (0cm, -1cm)$) {};\node[anchor=center, fill=white, font=\fontsize{30}{30}\selectfont] at (effectbox.center) {?};%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\bug};%
+\node[anchor=north west, fill=\frontendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south west) {Frontend};%
+\node[anchor=south, text width=5cm, font=\large] at ($(border.south) + (0cm, 0.5cm)$) {\textit{Klartext-Passwort im Login-Form}};%
+\node[anchor=north, minimum width = 5cm, minimum height = 2.1cm, draw, rounded corners] (costbox) at ($(frontnamebox.south) + (0cm, -2cm)$) {};\node[anchor=west, minimum width = 2.5cm, minimum height = 2.1cm] (costboxwest) at (costbox.west) {};\node[anchor=east, minimum width = 2.5cm, minimum height = 2.1cm] (costboxeast) at (costbox.east) {};\node[anchor=west, fill=white, font=\large] at ($(costbox.north west) + (0.25cm, 0cm)$) {\textkosten};\node[anchor = center, font=\Huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor=center, font=\Large] at (costbox.center) {+};\node[anchor = west, font=\Huge] at ($(costboxeast.west) + (0.25cm, 0cm)$) {1};\node[anchor=north west, font=\Large] at ($(costboxeast.north west) + (0.75cm, -0.4cm)$) {\emoji{teddy-bear}};\node[anchor=north west, draw, circle, fill=\frontendcolor, minimum size = 0.5cm] at ($(costboxeast.north west) + (1.5cm, -1.25cm)$) {};\draw ($(costboxeast.south west) + (0.9cm, 0.55cm)$) -- ($(costboxeast.north east) + (-0.6cm, -0.55cm)$);%
+\node[anchor=center, draw, rounded corners, minimum width = 1.5cm, minimum height = 1.5cm] (effectbox) at ($(costbox.south) + (0cm, -1cm)$) {};\node[anchor=center, fill=white, font=\fontsize{30}{30}\selectfont] at (effectbox.center) {?};%
+\end{tikzpicture}%
+\newline%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\bug};%
+\node[anchor=north west, fill=\frontendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south west) {Frontend};%
+\node[anchor=south, text width=5cm, font=\large] at ($(border.south) + (0cm, 0.5cm)$) {\textit{Passwortfehler bei erfolgreichem Login}};%
+\node[anchor=north, minimum width = 5cm, minimum height = 2.1cm, draw, rounded corners] (costbox) at ($(frontnamebox.south) + (0cm, -2cm)$) {};\node[anchor=west, minimum width = 2.5cm, minimum height = 2.1cm] (costboxwest) at (costbox.west) {};\node[anchor=east, minimum width = 2.5cm, minimum height = 2.1cm] (costboxeast) at (costbox.east) {};\node[anchor=west, fill=white, font=\large] at ($(costbox.north west) + (0.25cm, 0cm)$) {\textkosten};\node[anchor = center, font=\Huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor=center, font=\Large] at (costbox.center) {+};\node[anchor = west, font=\Huge] at ($(costboxeast.west) + (0.25cm, 0cm)$) {1};\node[anchor=north west, font=\Large] at ($(costboxeast.north west) + (0.75cm, -0.4cm)$) {\emoji{teddy-bear}};\node[anchor=north west, draw, circle, fill=\frontendcolor, minimum size = 0.5cm] at ($(costboxeast.north west) + (1.5cm, -1.25cm)$) {};\draw ($(costboxeast.south west) + (0.9cm, 0.55cm)$) -- ($(costboxeast.north east) + (-0.6cm, -0.55cm)$);%
+\node[anchor=center, draw, rounded corners, minimum width = 1.5cm, minimum height = 1.5cm] (effectbox) at ($(costbox.south) + (0cm, -1cm)$) {};\node[anchor=center, fill=white, font=\fontsize{30}{30}\selectfont] at (effectbox.center) {?};%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\bug};%
+\node[anchor=north west, fill=\frontendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south west) {Frontend};%
+\node[anchor=south, text width=5cm, font=\large] at ($(border.south) + (0cm, 0.5cm)$) {\textit{\glqq Löschen\grqq -Button löscht falschen Eintrag}};%
+\node[anchor=north, minimum width = 5cm, minimum height = 2.1cm, draw, rounded corners] (costbox) at ($(frontnamebox.south) + (0cm, -2cm)$) {};\node[anchor=west, minimum width = 2.5cm, minimum height = 2.1cm] (costboxwest) at (costbox.west) {};\node[anchor=east, minimum width = 2.5cm, minimum height = 2.1cm] (costboxeast) at (costbox.east) {};\node[anchor=west, fill=white, font=\large] at ($(costbox.north west) + (0.25cm, 0cm)$) {\textkosten};\node[anchor = center, font=\Huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor=center, font=\Large] at (costbox.center) {+};\node[anchor = west, font=\Huge] at ($(costboxeast.west) + (0.25cm, 0cm)$) {1};\node[anchor=north west, font=\Large] at ($(costboxeast.north west) + (0.75cm, -0.4cm)$) {\emoji{teddy-bear}};\node[anchor=north west, draw, circle, fill=\frontendcolor, minimum size = 0.5cm] at ($(costboxeast.north west) + (1.5cm, -1.25cm)$) {};\draw ($(costboxeast.south west) + (0.9cm, 0.55cm)$) -- ($(costboxeast.north east) + (-0.6cm, -0.55cm)$);%
+\node[anchor=center, draw, rounded corners, minimum width = 1.5cm, minimum height = 1.5cm] (effectbox) at ($(costbox.south) + (0cm, -1cm)$) {};\node[anchor=center, fill=white, font=\fontsize{30}{30}\selectfont] at (effectbox.center) {?};%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\bug};%
+\node[anchor=north west, fill=\frontendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south west) {Frontend};%
+\node[anchor=south, text width=5cm, font=\large] at ($(border.south) + (0cm, 0.5cm)$) {\textit{Icons skalieren nicht richtig}};%
+\node[anchor=north, minimum width = 5cm, minimum height = 2.1cm, draw, rounded corners] (costbox) at ($(frontnamebox.south) + (0cm, -2cm)$) {};\node[anchor=west, minimum width = 2.5cm, minimum height = 2.1cm] (costboxwest) at (costbox.west) {};\node[anchor=east, minimum width = 2.5cm, minimum height = 2.1cm] (costboxeast) at (costbox.east) {};\node[anchor=west, fill=white, font=\large] at ($(costbox.north west) + (0.25cm, 0cm)$) {\textkosten};\node[anchor = east, font=\Huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor = west, font=\Huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor=center, font=\Large] at (costbox.center) {+};\node[anchor = west, font=\Huge] at ($(costboxeast.west) + (0.25cm, 0cm)$) {1};\node[anchor=north west, font=\Large] at ($(costboxeast.north west) + (0.75cm, -0.4cm)$) {\emoji{teddy-bear}};\node[anchor=north west, draw, circle, fill=\frontendcolor, minimum size = 0.5cm] at ($(costboxeast.north west) + (1.5cm, -1.25cm)$) {};\draw ($(costboxeast.south west) + (0.9cm, 0.55cm)$) -- ($(costboxeast.north east) + (-0.6cm, -0.55cm)$);%
+\node[anchor=center, draw, rounded corners, minimum width = 1.5cm, minimum height = 1.5cm] (effectbox) at ($(costbox.south) + (0cm, -1cm)$) {};\node[anchor=center, fill=white, font=\fontsize{30}{30}\selectfont] at (effectbox.center) {?};%
+\end{tikzpicture}%
+\newline%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\bug};%
+\node[anchor=north east, fill=\backendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south east) {Backend};%
+\node[anchor=south, text width=5cm, font=\large] at ($(border.south) + (0cm, 0.5cm)$) {\textit{Falsches Format in der Datenbank}};%
+\node[anchor=north, minimum width = 5cm, minimum height = 2.1cm, draw, rounded corners] (costbox) at ($(frontnamebox.south) + (0cm, -2cm)$) {};\node[anchor=west, minimum width = 2.5cm, minimum height = 2.1cm] (costboxwest) at (costbox.west) {};\node[anchor=east, minimum width = 2.5cm, minimum height = 2.1cm] (costboxeast) at (costbox.east) {};\node[anchor=west, fill=white, font=\large] at ($(costbox.north west) + (0.25cm, 0cm)$) {\textkosten};\node[anchor = south, font=\huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor = north west, font=\huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor = north east, font=\huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor=center, font=\Large] at (costbox.center) {+};\node[anchor = west, font=\Huge] at ($(costboxeast.west) + (0.25cm, 0cm)$) {1};\node[anchor=north west, font=\Large] at ($(costboxeast.north west) + (0.75cm, -0.4cm)$) {\emoji{teddy-bear}};\node[anchor=north west, draw, circle, fill=\backendcolor, minimum size = 0.5cm] at ($(costboxeast.north west) + (1.5cm, -1.25cm)$) {};\draw ($(costboxeast.south west) + (0.9cm, 0.55cm)$) -- ($(costboxeast.north east) + (-0.6cm, -0.55cm)$);%
+\node[anchor=center, draw, rounded corners, minimum width = 1.5cm, minimum height = 1.5cm] (effectbox) at ($(costbox.south) + (0cm, -1cm)$) {};\node[anchor=center, fill=white, font=\fontsize{30}{30}\selectfont] at (effectbox.center) {?};%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\bug};%
+\node[anchor=north east, fill=\backendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south east) {Backend};%
+\node[anchor=south, text width=5cm, font=\large] at ($(border.south) + (0cm, 0.5cm)$) {\textit{Build schlägt wegen falschem Typen fehl}};%
+\node[anchor=north, minimum width = 5cm, minimum height = 2.1cm, draw, rounded corners] (costbox) at ($(frontnamebox.south) + (0cm, -2cm)$) {};\node[anchor=west, minimum width = 2.5cm, minimum height = 2.1cm] (costboxwest) at (costbox.west) {};\node[anchor=east, minimum width = 2.5cm, minimum height = 2.1cm] (costboxeast) at (costbox.east) {};\node[anchor=west, fill=white, font=\large] at ($(costbox.north west) + (0.25cm, 0cm)$) {\textkosten};\node[anchor = center, font=\Huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor=center, font=\Large] at (costbox.center) {+};\node[anchor = west, font=\Huge] at ($(costboxeast.west) + (0.25cm, 0cm)$) {1};\node[anchor=north west, font=\Large] at ($(costboxeast.north west) + (0.75cm, -0.4cm)$) {\emoji{teddy-bear}};\node[anchor=north west, draw, circle, fill=\backendcolor, minimum size = 0.5cm] at ($(costboxeast.north west) + (1.5cm, -1.25cm)$) {};\draw ($(costboxeast.south west) + (0.9cm, 0.55cm)$) -- ($(costboxeast.north east) + (-0.6cm, -0.55cm)$);%
+\node[anchor=center, draw, rounded corners, minimum width = 1.5cm, minimum height = 1.5cm] (effectbox) at ($(costbox.south) + (0cm, -1cm)$) {};\node[anchor=center, single arrow, draw, fill=white, rotate=270, minimum height=1cm, minimum width=1cm] at (effectbox.center) {};%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\bug};%
+\node[anchor=north west, fill=\frontendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south west) {Frontend};%
+\node[anchor=south, text width=5cm, font=\large] at ($(border.south) + (0cm, 0.5cm)$) {\textit{Alter Eintrag im \glqq new\grqq -Formular}};%
+\node[anchor=north, minimum width = 5cm, minimum height = 2.1cm, draw, rounded corners] (costbox) at ($(frontnamebox.south) + (0cm, -2cm)$) {};\node[anchor=west, minimum width = 2.5cm, minimum height = 2.1cm] (costboxwest) at (costbox.west) {};\node[anchor=east, minimum width = 2.5cm, minimum height = 2.1cm] (costboxeast) at (costbox.east) {};\node[anchor=west, fill=white, font=\large] at ($(costbox.north west) + (0.25cm, 0cm)$) {\textkosten};\node[anchor = south, font=\huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor = north west, font=\huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor = north east, font=\huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor=center, font=\Large] at (costbox.center) {+};\node[anchor = west, font=\Huge] at ($(costboxeast.west) + (0.25cm, 0cm)$) {1};\node[anchor=north west, font=\Large] at ($(costboxeast.north west) + (0.75cm, -0.4cm)$) {\emoji{teddy-bear}};\node[anchor=north west, draw, circle, fill=\frontendcolor, minimum size = 0.5cm] at ($(costboxeast.north west) + (1.5cm, -1.25cm)$) {};\draw ($(costboxeast.south west) + (0.9cm, 0.55cm)$) -- ($(costboxeast.north east) + (-0.6cm, -0.55cm)$);%
+\node[anchor=center, draw, rounded corners, minimum width = 1.5cm, minimum height = 1.5cm] (effectbox) at ($(costbox.south) + (0cm, -1cm)$) {};\node[anchor=center, single arrow, draw, fill=white, rotate=270, minimum height=1cm, minimum width=1cm] at (effectbox.center) {};%
+\end{tikzpicture}%
+\newline%
+\end{center}%
+\newpage%
+\begin{center}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\bug};%
+\node[anchor=north west, fill=\frontendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south west) {Frontend};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{Dir kommt es vor als hättest du diesen Bug schon einmal repariert.}};%
+\node[anchor=south, text width=5cm] at ($(border.south) + (0cm, 0.5cm)$) {Ist der Technical Debt in Frontend \technicaldebtfrontend\ größer oder gleich zwei, lege diese Karte umgedreht zurück ins Backlog. };%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\bug};%
+\node[anchor=north east, fill=\backendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south east) {Backend};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{Ein Bug weniger. Herzlichen Glückwunsch.}};%
+\node[anchor=south, text width=5cm] at ($(border.south) + (0cm, 0.5cm)$) {};%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\bug};%
+\node[anchor=north west, fill=\frontendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south west) {Frontend};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{Dieses Problem ist behoben, dafür bricht es an einer neuen Stelle auseinander.}};%
+\node[anchor=south, text width=5cm] at ($(border.south) + (0cm, 0.5cm)$) {\addbug\ };%
+\end{tikzpicture}%
+\newline%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\bug};%
+\node[anchor=north west, fill=\frontendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south west) {Frontend};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{Und ein weiteres Ticket abgeschlossen. Wunderbar!}};%
+\node[anchor=south, text width=5cm] at ($(border.south) + (0cm, 0.5cm)$) {};%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\bug};%
+\node[anchor=north west, fill=\frontendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south west) {Frontend};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{Diesen Bug hast du wie auf Autopilot repariert. Die Frage ist jetzt: weil er so einfach war oder weil du nicht ganz bei der Sache warst?}};%
+\node[anchor=south, text width=5cm] at ($(border.south) + (0cm, 0.5cm)$) {};%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\bug};%
+\node[anchor=north west, fill=\frontendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south west) {Frontend};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{Endlich ist dieser Bug zu. Also auf zum nächsten Ticket. Manchmal fragst du dich, ob du überhaupt noch ein Mensch bist oder nur noch für anstehende Tickets existierst.}};%
+\node[anchor=south, text width=5cm] at ($(border.south) + (0cm, 0.5cm)$) {};%
+\end{tikzpicture}%
+\newline%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\bug};%
+\node[anchor=north west, fill=\frontendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south west) {Frontend};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{It's not a bug, it's a feature. Ihr habt die ganze Arbeit umsonst gemacht. Hättet ihr das Feature mal dokumentiert. Dann wäre das nicht passiert.}};%
+\node[anchor=south, text width=5cm] at ($(border.south) + (0cm, 0.5cm)$) {\adddebtfrontend{1} };%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\bug};%
+\node[anchor=north east, fill=\backendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south east) {Backend};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{Der Bug hat sich als schwerwiegender herausgestellt als erwartet.}};%
+\node[anchor=south, text width=5cm] at ($(border.south) + (0cm, 0.5cm)$) {\adddebtbackend{1} \returntobacklog{\backend-\bug}{3}{\technicaldebtbackend} };%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\bug};%
+\node[anchor=north east, fill=\backendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south east) {Backend};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{Irgendwie seid ihr gerade ganz schön fertig und braucht eine Pause}};%
+\node[anchor=south, text width=5cm] at ($(border.south) + (0cm, 0.5cm)$) {\removetemporarystorypoints{1} };%
+\end{tikzpicture}%
+\newline%
+\end{center}%
+\newpage%
+\begin{center}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\bug};%
+\node[anchor=north east, fill=\backendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south east) {Backend};%
+\node[anchor=south, text width=5cm, font=\large] at ($(border.south) + (0cm, 0.5cm)$) {\textit{Verschwundene Daten wiederfinden}};%
+\node[anchor=north, minimum width = 5cm, minimum height = 2.1cm, draw, rounded corners] (costbox) at ($(frontnamebox.south) + (0cm, -2cm)$) {};\node[anchor=west, minimum width = 2.5cm, minimum height = 2.1cm] (costboxwest) at (costbox.west) {};\node[anchor=east, minimum width = 2.5cm, minimum height = 2.1cm] (costboxeast) at (costbox.east) {};\node[anchor=west, fill=white, font=\large] at ($(costbox.north west) + (0.25cm, 0cm)$) {\textkosten};\node[anchor = south, font=\huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor = north west, font=\huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor = north east, font=\huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor=center, font=\Large] at (costbox.center) {+};\node[anchor = west, font=\Huge] at ($(costboxeast.west) + (0.25cm, 0cm)$) {1};\node[anchor=north west, font=\Large] at ($(costboxeast.north west) + (0.75cm, -0.4cm)$) {\emoji{teddy-bear}};\node[anchor=north west, draw, circle, fill=\backendcolor, minimum size = 0.5cm] at ($(costboxeast.north west) + (1.5cm, -1.25cm)$) {};\draw ($(costboxeast.south west) + (0.9cm, 0.55cm)$) -- ($(costboxeast.north east) + (-0.6cm, -0.55cm)$);%
+\node[anchor=center, draw, rounded corners, minimum width = 1.5cm, minimum height = 1.5cm] (effectbox) at ($(costbox.south) + (0cm, -1cm)$) {};\node[anchor=center, single arrow, draw, fill=white, rotate=270, minimum height=1cm, minimum width=1cm] at (effectbox.center) {};%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\bug};%
+\node[anchor=north east, fill=\backendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south east) {Backend};%
+\node[anchor=south, text width=5cm, font=\large] at ($(border.south) + (0cm, 0.5cm)$) {\textit{Verwendung eines falschen Parsers}};%
+\node[anchor=north, minimum width = 5cm, minimum height = 2.1cm, draw, rounded corners] (costbox) at ($(frontnamebox.south) + (0cm, -2cm)$) {};\node[anchor=west, minimum width = 2.5cm, minimum height = 2.1cm] (costboxwest) at (costbox.west) {};\node[anchor=east, minimum width = 2.5cm, minimum height = 2.1cm] (costboxeast) at (costbox.east) {};\node[anchor=west, fill=white, font=\large] at ($(costbox.north west) + (0.25cm, 0cm)$) {\textkosten};\node[anchor = center, font=\Huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor=center, font=\Large] at (costbox.center) {+};\node[anchor = west, font=\Huge] at ($(costboxeast.west) + (0.25cm, 0cm)$) {1};\node[anchor=north west, font=\Large] at ($(costboxeast.north west) + (0.75cm, -0.4cm)$) {\emoji{teddy-bear}};\node[anchor=north west, draw, circle, fill=\backendcolor, minimum size = 0.5cm] at ($(costboxeast.north west) + (1.5cm, -1.25cm)$) {};\draw ($(costboxeast.south west) + (0.9cm, 0.55cm)$) -- ($(costboxeast.north east) + (-0.6cm, -0.55cm)$);%
+\node[anchor=center, draw, rounded corners, minimum width = 1.5cm, minimum height = 1.5cm] (effectbox) at ($(costbox.south) + (0cm, -1cm)$) {};\node[anchor=center, single arrow, draw, fill=white, rotate=90, minimum height=1cm, minimum width=1cm] at (effectbox.center) {};%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\bug};%
+\node[anchor=north west, fill=\frontendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south west) {Frontend};%
+\node[anchor=south, text width=5cm, font=\large] at ($(border.south) + (0cm, 0.5cm)$) {\textit{Sensitive Informationen sind für alle sichtbar}};%
+\node[anchor=north, minimum width = 5cm, minimum height = 2.1cm, draw, rounded corners] (costbox) at ($(frontnamebox.south) + (0cm, -2cm)$) {};\node[anchor=west, minimum width = 2.5cm, minimum height = 2.1cm] (costboxwest) at (costbox.west) {};\node[anchor=east, minimum width = 2.5cm, minimum height = 2.1cm] (costboxeast) at (costbox.east) {};\node[anchor=west, fill=white, font=\large] at ($(costbox.north west) + (0.25cm, 0cm)$) {\textkosten};\node[anchor = south, font=\huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor = north west, font=\huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor = north east, font=\huge] at (costboxwest.center) {\emoji{teddy-bear}};\node[anchor=center, font=\Large] at (costbox.center) {+};\node[anchor = west, font=\Huge] at ($(costboxeast.west) + (0.25cm, 0cm)$) {1};\node[anchor=north west, font=\Large] at ($(costboxeast.north west) + (0.75cm, -0.4cm)$) {\emoji{teddy-bear}};\node[anchor=north west, draw, circle, fill=\frontendcolor, minimum size = 0.5cm] at ($(costboxeast.north west) + (1.5cm, -1.25cm)$) {};\draw ($(costboxeast.south west) + (0.9cm, 0.55cm)$) -- ($(costboxeast.north east) + (-0.6cm, -0.55cm)$);%
+\node[anchor=center, draw, rounded corners, minimum width = 1.5cm, minimum height = 1.5cm] (effectbox) at ($(costbox.south) + (0cm, -1cm)$) {};\node[anchor=center, single arrow, draw, fill=white, rotate=90, minimum height=1cm, minimum width=1cm] at (effectbox.center) {};%
+\end{tikzpicture}%
+\newline%
+\end{center}%
+\newpage%
+\begin{center}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\bug};%
+\node[anchor=north west, fill=\frontendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south west) {Frontend};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{Den Bug zu finden war einfacher als angenommen. Das gibt dir neue Zuversicht in deine Fähigkeiten.}};%
+\node[anchor=south, text width=5cm] at ($(border.south) + (0cm, 0.5cm)$) {\addtemporarystorypoints{1} };%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\bug};%
+\node[anchor=north east, fill=\backendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south east) {Backend};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{Die Reparatur dieses Bugs hat zu neuer Motivation für schöne Architektur geführt.}};%
+\node[anchor=south, text width=5cm] at ($(border.south) + (0cm, 0.5cm)$) {\removedebtbackend{1} };%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {\bug};%
+\node[anchor=north east, fill=\backendcolor, draw, font=\Large, minimum width=3cm, minimum height = 0.75cm] at (frontnamebox.south east) {Backend};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{Endlich ist dieser Bug gefixt. Das hat euch aber ganz schön geschlaucht, sodass ihr Urlaub braucht.}};%
+\node[anchor=south, text width=5cm] at ($(border.south) + (0cm, 0.5cm)$) {\removetemporarystorypoints{2} };%
+\end{tikzpicture}%
+\newline%
+\end{center}%
+\newpage%
+\begin{center}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {Event \emoji{calendar}};%
+\node[anchor=north west, minimum width = 6cm, minimum height = 0.75cm, draw, fill=\eventcolor] at (frontnamebox.south west) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = 6cm] (iterationbox) at ($(frontnamebox.south) + (0cm, -0.75cm)$) {};\draw[arrows={-Stealth[fill=white, length=8mm]}, double, double distance = 3pt, line width = 1pt] ($(iterationbox.center) + (2cm, 0cm)$) arc[start angle=0, delta angle = 355, x radius = 2cm, y radius = 2cm];\node[anchor=center, font=\fontsize{80}{80}\selectfont] at (iterationbox.center) {1};\node[anchor=center, fill=white, text=black, font=\Large] at ($(iterationbox.center) + (-2cm, 0cm) + (0.3cm, 0cm)$) {Iteration};%
+\node[anchor=south, minimum width = 6cm, text width = 5cm, font=\Large, text centered] at ($(border.south) + (0cm, 0.5cm)$) {\textit{Startschwierigkeiten}};%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {Event \emoji{calendar}};%
+\node[anchor=north west, minimum width = 6cm, minimum height = 0.75cm, draw, fill=\eventcolor] at (frontnamebox.south west) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = 6cm] (iterationbox) at ($(frontnamebox.south) + (0cm, -0.75cm)$) {};\draw[arrows={-Stealth[fill=white, length=8mm]}, double, double distance = 3pt, line width = 1pt] ($(iterationbox.center) + (2cm, 0cm)$) arc[start angle=0, delta angle = 355, x radius = 2cm, y radius = 2cm];\node[anchor=center, font=\fontsize{80}{80}\selectfont] at (iterationbox.center) {2};\node[anchor=center, fill=white, text=black, font=\Large] at ($(iterationbox.center) + (-2cm, 0cm) + (0.3cm, 0cm)$) {Iteration};%
+\node[anchor=south, minimum width = 6cm, text width = 5cm, font=\Large, text centered] at ($(border.south) + (0cm, 0.5cm)$) {\textit{Die Herausforderung}};%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {Event \emoji{calendar}};%
+\node[anchor=north west, minimum width = 6cm, minimum height = 0.75cm, draw, fill=\eventcolor] at (frontnamebox.south west) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = 6cm] (iterationbox) at ($(frontnamebox.south) + (0cm, -0.75cm)$) {};\draw[arrows={-Stealth[fill=white, length=8mm]}, double, double distance = 3pt, line width = 1pt] ($(iterationbox.center) + (2cm, 0cm)$) arc[start angle=0, delta angle = 355, x radius = 2cm, y radius = 2cm];\node[anchor=center, font=\fontsize{80}{80}\selectfont] at (iterationbox.center) {3};\node[anchor=center, fill=white, text=black, font=\Large] at ($(iterationbox.center) + (-2cm, 0cm) + (0.3cm, 0cm)$) {Iteration};%
+\node[anchor=south, minimum width = 6cm, text width = 5cm, font=\Large, text centered] at ($(border.south) + (0cm, 0.5cm)$) {\textit{Das Kundengespräch}};%
+\end{tikzpicture}%
+\newline%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {Event \emoji{calendar}};%
+\node[anchor=north west, minimum width = 6cm, minimum height = 0.75cm, draw, fill=\eventcolor] at (frontnamebox.south west) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = 6cm] (iterationbox) at ($(frontnamebox.south) + (0cm, -0.75cm)$) {};\draw[arrows={-Stealth[fill=white, length=8mm]}, double, double distance = 3pt, line width = 1pt] ($(iterationbox.center) + (2cm, 0cm)$) arc[start angle=0, delta angle = 355, x radius = 2cm, y radius = 2cm];\node[anchor=center, font=\fontsize{80}{80}\selectfont] at (iterationbox.center) {4};\node[anchor=center, fill=white, text=black, font=\Large] at ($(iterationbox.center) + (-2cm, 0cm) + (0.3cm, 0cm)$) {Iteration};%
+\node[anchor=south, minimum width = 6cm, text width = 5cm, font=\Large, text centered] at ($(border.south) + (0cm, 0.5cm)$) {\textit{Ein frischer Wind}};%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {Event \emoji{calendar}};%
+\node[anchor=north west, minimum width = 6cm, minimum height = 0.75cm, draw, fill=\eventcolor] at (frontnamebox.south west) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = 6cm] (iterationbox) at ($(frontnamebox.south) + (0cm, -0.75cm)$) {};\draw[arrows={-Stealth[fill=white, length=8mm]}, double, double distance = 3pt, line width = 1pt] ($(iterationbox.center) + (2cm, 0cm)$) arc[start angle=0, delta angle = 355, x radius = 2cm, y radius = 2cm];\node[anchor=center, font=\fontsize{80}{80}\selectfont] at (iterationbox.center) {5};\node[anchor=center, fill=white, text=black, font=\Large] at ($(iterationbox.center) + (-2cm, 0cm) + (0.3cm, 0cm)$) {Iteration};%
+\node[anchor=south, minimum width = 6cm, text width = 5cm, font=\Large, text centered] at ($(border.south) + (0cm, 0.5cm)$) {\textit{Die Verschnaufspause}};%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {Event \emoji{calendar}};%
+\node[anchor=north west, minimum width = 6cm, minimum height = 0.75cm, draw, fill=\eventcolor] at (frontnamebox.south west) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = 6cm] (iterationbox) at ($(frontnamebox.south) + (0cm, -0.75cm)$) {};\draw[arrows={-Stealth[fill=white, length=8mm]}, double, double distance = 3pt, line width = 1pt] ($(iterationbox.center) + (2cm, 0cm)$) arc[start angle=0, delta angle = 355, x radius = 2cm, y radius = 2cm];\node[anchor=center, font=\fontsize{80}{80}\selectfont] at (iterationbox.center) {6};\node[anchor=center, fill=white, text=black, font=\Large] at ($(iterationbox.center) + (-2cm, 0cm) + (0.3cm, 0cm)$) {Iteration};%
+\node[anchor=south, minimum width = 6cm, text width = 5cm, font=\Large, text centered] at ($(border.south) + (0cm, 0.5cm)$) {\textit{Unerwartete Probleme}};%
+\end{tikzpicture}%
+\newline%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {Event \emoji{calendar}};%
+\node[anchor=north west, minimum width = 6cm, minimum height = 0.75cm, draw, fill=\eventcolor] at (frontnamebox.south west) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = 6cm] (iterationbox) at ($(frontnamebox.south) + (0cm, -0.75cm)$) {};\draw[arrows={-Stealth[fill=white, length=8mm]}, double, double distance = 3pt, line width = 1pt] ($(iterationbox.center) + (2cm, 0cm)$) arc[start angle=0, delta angle = 355, x radius = 2cm, y radius = 2cm];\node[anchor=center, font=\fontsize{80}{80}\selectfont] at (iterationbox.center) {7};\node[anchor=center, fill=white, text=black, font=\Large] at ($(iterationbox.center) + (-2cm, 0cm) + (0.3cm, 0cm)$) {Iteration};%
+\node[anchor=south, minimum width = 6cm, text width = 5cm, font=\Large, text centered] at ($(border.south) + (0cm, 0.5cm)$) {\textit{Unmut im Team}};%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {Event \emoji{calendar}};%
+\node[anchor=north west, minimum width = 6cm, minimum height = 0.75cm, draw, fill=\eventcolor] at (frontnamebox.south west) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = 6cm] (iterationbox) at ($(frontnamebox.south) + (0cm, -0.75cm)$) {};\draw[arrows={-Stealth[fill=white, length=8mm]}, double, double distance = 3pt, line width = 1pt] ($(iterationbox.center) + (2cm, 0cm)$) arc[start angle=0, delta angle = 355, x radius = 2cm, y radius = 2cm];\node[anchor=center, font=\fontsize{80}{80}\selectfont] at (iterationbox.center) {8};\node[anchor=center, fill=white, text=black, font=\Large] at ($(iterationbox.center) + (-2cm, 0cm) + (0.3cm, 0cm)$) {Iteration};%
+\node[anchor=south, minimum width = 6cm, text width = 5cm, font=\Large, text centered] at ($(border.south) + (0cm, 0.5cm)$) {\textit{Mark im Glück}};%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {Event \emoji{calendar}};%
+\node[anchor=north west, minimum width = 6cm, minimum height = 0.75cm, draw, fill=\eventcolor] at (frontnamebox.south west) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = 6cm] (iterationbox) at ($(frontnamebox.south) + (0cm, -0.75cm)$) {};\draw[arrows={-Stealth[fill=white, length=8mm]}, double, double distance = 3pt, line width = 1pt] ($(iterationbox.center) + (2cm, 0cm)$) arc[start angle=0, delta angle = 355, x radius = 2cm, y radius = 2cm];\node[anchor=center, font=\fontsize{80}{80}\selectfont] at (iterationbox.center) {9};\node[anchor=center, fill=white, text=black, font=\Large] at ($(iterationbox.center) + (-2cm, 0cm) + (0.3cm, 0cm)$) {Iteration};%
+\node[anchor=south, minimum width = 6cm, text width = 5cm, font=\Large, text centered] at ($(border.south) + (0cm, 0.5cm)$) {\textit{Fast geschafft ...}};%
+\end{tikzpicture}%
+\newline%
+\end{center}%
+\newpage%
+\begin{center}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {Event \emoji{calendar}};%
+\node[anchor=north west, minimum width = 6cm, minimum height = 0.75cm, draw, fill=\eventcolor] at (frontnamebox.south west) {};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{\personasabine\ hat wieder mit \personamark\ gesprochen. Unter Zeitdruck konnte sie leider nicht nein sagen.}};%
+\node[anchor=south, text width=2in] at ($(border.south) + (0cm, 0.5cm)$) {\addfeatures{2} };%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {Event \emoji{calendar}};%
+\node[anchor=north west, minimum width = 6cm, minimum height = 0.75cm, draw, fill=\eventcolor] at (frontnamebox.south west) {};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{\personaharald\ möchte wissen aus welchem Holz ihr geschnitzt seid.}};%
+\node[anchor=south, text width=2in] at ($(border.south) + (0cm, 0.5cm)$) {Schafft ihr es bis zum Beginn von Iteration 5 insgesamt 8 Features bearbeitet zu haben, erhaltet ihr dauerhaft 2 \storypoint. };%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {Event \emoji{calendar}};%
+\node[anchor=north west, minimum width = 6cm, minimum height = 0.75cm, draw, fill=\eventcolor] at (frontnamebox.south west) {};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{Die IT-Abteilung hat es noch nicht geschafft, den GitLab-Zugriff für euch alle freizuschalten. Das wird aber \glqq bald\grqq\ passieren.}};%
+\node[anchor=south, text width=2in] at ($(border.south) + (0cm, 0.5cm)$) {\removetemporarystorypointsnow{2} };%
+\end{tikzpicture}%
+\newline%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {Event \emoji{calendar}};%
+\node[anchor=north west, minimum width = 6cm, minimum height = 0.75cm, draw, fill=\eventcolor] at (frontnamebox.south west) {};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{Aufgrund von Budgetkürzungen müssen Mitarbeiter:innen entlassen werden.}};%
+\node[anchor=south, text width=2in] at ($(border.south) + (0cm, 0.5cm)$) {Ihr habt dauerhaft nur noch die Hälfte (aufgerundet) der aktuellen Storypoints \storypoint\ zur Verfügung. };%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {Event \emoji{calendar}};%
+\node[anchor=north west, minimum width = 6cm, minimum height = 0.75cm, draw, fill=\eventcolor] at (frontnamebox.south west) {};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{Nach einer kurzen Pause am Kicker geht ihr mit vollem Elan zurück an die Arbeit.}};%
+\node[anchor=south, text width=2in] at ($(border.south) + (0cm, 0.5cm)$) {\addtemporarystorypointsnow{2} };%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {Event \emoji{calendar}};%
+\node[anchor=north west, minimum width = 6cm, minimum height = 0.75cm, draw, fill=\eventcolor] at (frontnamebox.south west) {};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{Die Firma hat ein Sommerfest veranstaltet, was euch neue Energie gibt.}};%
+\node[anchor=south, text width=2in] at ($(border.south) + (0cm, 0.5cm)$) {\addpermanentstorypoints{2} };%
+\end{tikzpicture}%
+\newline%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {Event \emoji{calendar}};%
+\node[anchor=north west, minimum width = 6cm, minimum height = 0.75cm, draw, fill=\eventcolor] at (frontnamebox.south west) {};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{Ihr seid kurz vor dem Release. Da wird wohl leider ein Crunch nötig.}};%
+\node[anchor=south, text width=2in] at ($(border.south) + (0cm, 0.5cm)$) {\addbug\ \addfeatures{2} };%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {Event \emoji{calendar}};%
+\node[anchor=north west, minimum width = 6cm, minimum height = 0.75cm, draw, fill=\eventcolor] at (frontnamebox.south west) {};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{\personamark\ ist sehr zufrieden mit euch und hat seine Prioritäten überdacht.}};%
+\node[anchor=south, text width=2in] at ($(border.south) + (0cm, 0.5cm)$) {Entfernt das \feature\ mit den geringsten Kosten aus dem Backlog. Das weggelegte Feature zählt \underline{\textbf{nicht}} für die Berechnung des Technical Debt, gibt aber auch \underline{\textbf{keinen}} Punkt. };%
+\end{tikzpicture}%
+\begin{tikzpicture}%
+\node[draw, minimum height=9cm, minimum width=6cm] (border) at (0.0,0.0) {};%
+\node[anchor=north, minimum width = 6cm, minimum height = \baselineskip + 0.75cm, draw] (frontnamebox) at (border.north) {};\node[anchor=center, font=\Huge] at (frontnamebox.center) {Event \emoji{calendar}};%
+\node[anchor=north west, minimum width = 6cm, minimum height = 0.75cm, draw, fill=\eventcolor] at (frontnamebox.south west) {};%
+\node[anchor=north, text width=5cm] at ($(frontnamebox.south) + (0cm, -0.8cm)$) {\textit{\personaharald\ hat heute einen sehr schlechten Tag, sodass er in Sachen Planning nicht mit sich reden lässt.}};%
+\node[anchor=south, text width=2in] at ($(border.south) + (0cm, 0.5cm)$) {Ihr dürft diese Iteration \underline{\textbf{nicht}} refactorn. };%
+\end{tikzpicture}%
+\newline%
+\end{center}%
+\newpage%
+\end{document}

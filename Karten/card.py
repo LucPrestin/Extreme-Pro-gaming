@@ -1,3 +1,5 @@
+from typing import Dict
+
 from pylatex import NoEscape, TikZCoordinate, TikZNode
 
 
@@ -8,7 +10,7 @@ class Card:
         self.action_text = action_text
 
     @classmethod
-    def temporarystrypointsstatement(cls) -> str:
+    def temporarystrypointsstatement(cls) -> Dict[str, str]:
         return {
             "remove": r"\removetemporarystorypoints",
             "add": r"\addtemporarystorypoints",
