@@ -1,5 +1,5 @@
 ID;Reihenfolge;Foreshadowing;Fluff;Temporäre Veränderung an Storypoints;Permanente Veränderung an Storypoints;Veränderung an Bugs;Veränderung an Features;Debt Backend;Debt Frontend;Sonstiger Effekt
-Event 01;1;Difficulties getting started;The IT department did not prepare your GitLab accounts yet. But ther assert it will happen \glqq soon\grqq .;-2;;;;;;
+Event 01;1;Difficulties getting started;The IT department did not prepare your GitLab accounts yet. But they assert it will happen \glqq soon\grqq .;-2;;;;;;
 Event 20;2;The challenge;\personaharald\ wants to know what you're made of.;;;;;;;If you manage to complete 8 features until the start of iteration 5, you permanently gain 2 \storypoint.
 Event 04;3;Talking to the customer;\personasabine\ talked to \personamark\ again. Under time pressure, she could not say no.;;;;2;;;
 Event 05;4;A fresh wind;The company organized a summer festival which gives you new energy.;;2;;;;;
