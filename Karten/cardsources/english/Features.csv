@@ -1,0 +1,28 @@
+ID;Kosten;Titel;Effekthinweis;Systemteil;Ist Start-Ticket;Fluff;Temporäre Veränderung an Storypoints;Permanente Veränderung an Storypoints;Veränderung an Bugs;Veränderung an Features;Debt Backend;Debt Frontend;Sonstiger Effekt
+Feature 01;1;Fuzzy search for reports;hidden;Backend;Nein;This feature replaced an obsolete one. The code became significantly leaner as a result.;;;;;-1;;\dontcountfordebtcalculation
+Feature 02;1;Editing a report should change its author;hidden;Backend;Nein;You came up with some new ideas during the implementation of this feature.;;;;1;;;
+Feature 03;1;Send emails in only one language;hidden;Backend;Nein;This was a small task for you that means a lot for someone else. You draw strenght from this knowledge.;1;;;;;;
+Feature 04;1;Editable templates for reports;hidden;Frontend;Nein;This feature is completed but unfortunately, you made some mistakes.;;;2;;;;
+Feature 05;1;Automatic color scheme switching;hidden;Frontend;Nein;The feature turns out to be more complicated than expected, so you take it with you into the next iteration.;;;;;;;\returntobacklog{\frontend-\feature}{3}{\technicaldebtfrontend} You \underline{\textbf{must}} select it for the next iteration.
+Feature 06;1;Integrate statistics into the overview;hidden;Frontend;Nein;Today, you are somewhat unfocused.;;;;;;1;
+Feature 07;1;Barchart for income and expenses in each category;negative;Frontend;Nein;\personaharald\ likes the new feature and is eager to see it improved further.;;;;1;;;The feature added this way \underline{\textbf{must}} be selected in the next iteration.
+Feature 08;1;Adapt to corporate design;negative;Frontend;Nein;Just when you completed this feature, \personamathilde\ calls you with some feedback.;;;1;;;;
+Feature 09;1;Automatic reminders via email;positive;Backend;Nein;Nice work.;;;;;;;\dontcountfordebtcalculation
+Feature 10;1;Make texts sound friendlier;positive;Frontend;Nein;You've been wanting to work on this feature for a long time. Yo're very happy to have tackled it now, which results in a motivation boost.;;1;;;;;
+Feature 11;2;Integration for the bookkeeping software;hidden;Backend;Nein;Very good, another feature is completed. You can be proud of that.;;;;;;;
+Feature 12;2;Keyboard shortcuts;hidden;Frontend;Nein;You still had some time after this featur, so you sat down to refactor. You were unfocused though, so parts of that need to be redone.;-1;;;;;-1;
+Feature 13;2;Icons for the most important buttons;hidden;Frontend;Ja;While working through this feature, you noticed some errors.;;;1;;;;
+Feature 14;2;Improving performance of the import parser;negative;Backend;Nein;During the implementation of this feature, you noticed a problem in the legacy code.;;;1;;;;
+Feature 15;2;Collect server-side usage statistics;positive;Backend;Nein;While working on this feature, \personaharald\ approached you and gave you new IT equipment. This will make your work easier in the future.;;2;;;;;
+Feature 16;2;Model for annotations to reports;positive;Backend;Nein;This feature integrated very well with the codebase.;;;;;;;\dontcountfordebtcalculation
+Feature 17;2;Pdf export of reports;positive;Backend;Nein;This feature was easier than expected. You used the free time to refactor a little.;;;;;-1;;\dontcountfordebtcalculation
+Feature 18;2;Seamless transition between visualizations;positive;Frontend;Nein;While implementing this feature, you noticed code that is never called. After consulting with the team you removed it.;;;;;;-1;
+Feature 19;2;Add overview to side panel;positive;Frontend;Nein;Finishing this feature went faster than expected. You used the time to continue working on others.;;;;;;;A \feature\ from the backlog with \kosten{1} is considered implemented without effect activation. However, it counts for the calculation of the technical debt.
+Feature 20;3;Implement new design of the search filters;hidden;Frontend;Nein;During coding, you realize that you still need a new design for a component. The UX team gets to work.;;;;;;;\returntobacklog{\frontend-\feature}{1}{\technicaldebtfrontend} You \underline{\textbf{must not}} select it for the next iteration.
+Feature 21;3;Hash the login key;negative;Backend;Ja;All team members worked individually on this feature without communicating it. As a result, the overall system is a mess.;;;;;1;;
+Feature 22;3;Implementation of the report life cycle;negative;Backend;Nein;Just when you were done, your computer crashes and today's work is gone.;;;;;;;\returntobacklog{\backend-\feature}{2}{\technicaldebtbackend}
+Feature 23;3;Migration of the database to the new schema;negative;Backend;Ja;This ticket was big. But at least the groundwork has now been done and you can add cool new features on top. There are no limits to your creativity.;;;;1;;;
+Feature 24;3;Allow statistical queries for controlling;negative;Frontend;Nein;The security department has found a problem with this features.;;;1;;;;
+Feature 25;3;Onboarding tour for new users;positive;Frontend;Nein;This feature was quite a chunk of work. Finishing it helped bringing you together as a team so that future work will be easier.;;1;;;;;
+Feature 26;1;Input of base data;negative;Frontend;Nein;The implementatio of this feature meant a lot of fast typing, so one of you got repetitive strain injury and is out sick for the time being.;;-2;;;;;
+Feature 27;2;LDAP integration;hidden;Backend;Nein;THis feature needed shortgun surgery: lots of small changes in lots of places. Maybe it's time to refactor.;;;;;1;1;
