@@ -17,6 +17,10 @@ class Ticket(Card):
         self.cost = cost
         self.system_part = system_part
         self.title = title
+    @classmethod
+    def load_from_csv(cls, language: str):
+        raise NotImplementedError("Subclass Responsibility")
+        
 
     @classmethod
     def load_from_file(cls, filename):
@@ -77,7 +81,7 @@ class Ticket(Card):
 
     def create_cost_symbol(self):
         costbox_height = "2.1cm"
-
+ 
         tikz_command = NoEscape(
             f"\\node[anchor=north, minimum width = 5cm, minimum height = {costbox_height}, draw, rounded corners] (costbox) at ($(frontnamebox.south) + (0cm, -2cm)$) {{}};"
         )
