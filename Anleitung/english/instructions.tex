@@ -72,13 +72,13 @@ Welcome to MagicSoftware Inc. We are delighted that you are joining us as a new 
         \node[draw, inner sep=0cm, line width = 1mm] (card) {\includegraphics[width=0.3\textwidth]{images/event}};
 
         \node[anchor=north west, text width = 6cm] (title) at ($(card.north east) + (1cm, -0.3cm)$) {\textbf{Card type}: Events are unforeseen incidents that occur during the project. You will find out whether they have a positive or negative effect during execution.};
-        \draw[->, line width = 1mm, dotted] ($(title.north west) + (0mm, -2.5mm)$) -- ($(title.north west) + (-25mm, -2.5mm)$);
+        \draw[->, line width = 1mm, dotted] ($(title.north west) + (0mm, -2.5mm)$) -- ($(title.north west) + (-20mm, -2.5mm)$);
 
         \node[anchor=west, text width = 6cm] (iteration) at ($(card.east) + (1cm, -0.45cm)$) {\textbf{Upcoming Iteration}. There are nine iterations in total.};
         \draw[->, line width = 1mm, dotted] ($(iteration.north west) + (0mm, -2.5mm)$) -- ($(iteration.north west) + (-15mm, -2.5mm)$);
 
-        \node[anchor=south west, text width = 6cm] (foreshadowing) at ($(card.south east) + (1cm, -0.5cm)$) {\textbf{Title}: Hint of what to expect from the iteration.};
-        \draw[->, line width = 1mm, dotted] ($(foreshadowing.north west) + (0mm, -2.5mm)$) -- ($(foreshadowing.north west) + (-15mm, -2.5mm)$);
+        \node[anchor=south west, text width = 6cm] (foreshadowing) at ($(card.south east) + (1cm, 0.5cm)$) {\textbf{Title}: Hint of what to expect from the iteration.};
+        \draw[->, line width = 1mm, dotted] ($(foreshadowing.north west) + (0mm, -2.5mm)$) -- ($(foreshadowing.north west) + (-20mm, -2.5mm)$);
     \end{tikzpicture}
 \end{figure}
 
@@ -92,13 +92,13 @@ Welcome to MagicSoftware Inc. We are delighted that you are joining us as a new 
         \draw[->, line width = 1mm, dotted] (kartenart.south) -- ($(kartenart.south) + (0mm, -13mm)$);
 
         \node[anchor = north west, text width = 50mm] (startmarker) at ($(bug.north east) + (10mm, -2.5mm)$) {\textbf{Start marker (optional)}: Shows whether the ticket is on the game board at the beginning of the game.};
-        \draw[->, line width = 1mm, dotted] ($(startmarker.west) + (0mm, -3.5mm)$) -- ($(startmarker.west) + (-18mm, -3.5mm)$);
+        \draw[->, line width = 1mm, dotted] ($(startmarker.west) + (0mm, -1mm)$) -- ($(startmarker.west) + (-18mm, -1mm)$);
 
         \node[anchor = west, text width = 50mm] (cost) at ($(bug.east) + (10mm, -5mm)$) {\textbf{Cost}: Amount of story points you have to use for the ticket. The fixed cost are the amount of bears on the left side. Additionally, you have to use one storypoint for each technical debt in the corresponding system part.};
         \draw[->, line width = 1mm, dotted] ($(cost.west) + (0mm, 6mm)$) -- ($(cost.west) + (-13mm, 6mm)$);
 
-        \node[anchor = south west, text width = 50mm] (title) at ($(bug.south east) + (10mm, 0mm)$) {\textbf{Title}: A description of the ticket.};
-        \draw[->, line width = 1mm, dotted] ($(title.north west) + (0mm, -2.5mm)$) -- ($(title.north west) + (-15mm, -2.5mm)$);
+        \node[anchor = south west, text width = 50mm] (title) at ($(bug.south east) + (10mm, 4mm)$) {\textbf{Title}: A description of the ticket.};
+        \draw[->, line width = 1mm, dotted] ($(title.north west) + (0mm, -2.5mm)$) -- ($(title.north west) + (-14mm, -2.5mm)$);
 
         \node[anchor = north east, text width = 50mm] (system) at ($(bug.north west) + (-10mm, -7mm)$) {\textbf{System part}: Indicates whether the ticket belongs to the frontend or backend.};
         \draw[->, line width = 1mm, dotted] (system.east) -- ($(system.east) + (13mm, 0mm)$);
