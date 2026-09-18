@@ -19,7 +19,7 @@ class Ticket(Card):
         self.title = title
 
     @classmethod
-    def load_from_csv(cls, filename):
+    def load_from_file(cls, filename):
         result = []
 
         with open(filename, newline="") as csvfile:
@@ -88,7 +88,7 @@ class Ticket(Card):
             f"\\node[anchor=east, minimum width = 2.5cm, minimum height = {costbox_height}] (costboxeast) at (costbox.east) {{}};"
         )
         tikz_command += NoEscape(
-            f"\\node[anchor=west, fill=white, font=\\large] at ($(costbox.north west) + (0.25cm, 0cm)$) {{Kosten}};"
+            f"\\node[anchor=west, fill=white, font=\\large] at ($(costbox.north west) + (0.25cm, 0cm)$) {{\\textkosten}};"
         )
 
         teddy_bear = lambda anchor, size="huge": NoEscape(
@@ -207,8 +207,8 @@ class Ticket(Card):
 
 class Bug(Ticket):
     @classmethod
-    def load_from_csv(cls):
-        return super().load_from_csv("./cardsources/Bugs.csv")
+    def load_from_csv(cls, language: str):
+        return super().load_from_file(f"./cardsources/{language}/Bugs.csv")
 
     @property
     def frontnametext(self):
@@ -217,8 +217,8 @@ class Bug(Ticket):
 
 class Feature(Ticket):
     @classmethod
-    def load_from_csv(cls):
-        return super().load_from_csv("./cardsources/Features.csv")
+    def load_from_csv(cls, language: str):
+        return super().load_from_file(f"./cardsources/{language}/Features.csv")
 
     @property
     def frontnametext(self):

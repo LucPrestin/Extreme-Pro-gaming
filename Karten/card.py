@@ -1,3 +1,5 @@
+from typing import Dict
+
 from pylatex import NoEscape, TikZCoordinate, TikZNode
 
 
@@ -8,7 +10,11 @@ class Card:
         self.action_text = action_text
 
     @classmethod
-    def temporarystrypointsstatement(cls) -> str:
+    def load_from_csv(cls, language: str):
+        raise NotImplementedError("Subclass Responsibility")
+
+    @classmethod
+    def temporarystrypointsstatement(cls) -> Dict[str, str]:
         return {
             "remove": r"\removetemporarystorypoints",
             "add": r"\addtemporarystorypoints",
@@ -41,7 +47,8 @@ class Card:
                 permanent_storypoint = int(permanent_storypoint)
                 if permanent_storypoint < 0:
                     result += NoEscape(
-                        f"\\removepermanentstorypoints{{{abs(permanent_storypoint)}}} "
+                        f"\\removepermanentstorypoints{{{
+                            abs(permanent_storypoint)}}} "
                     )
                 elif permanent_storypoint > 0:
                     result += NoEscape(
@@ -119,5 +126,6 @@ class Card:
 
     def create_debug_id(self):
         return NoEscape(
-            f"\\node[anchor=north] at ($(border.north) + (0cm, -2.25cm)$) {{ID: {self.id}}};"
+            f"\\node[anchor=north] at ($(border.north) + (0cm, -2.25cm)$) {{ID: {
+                self.id}}};"
         )
